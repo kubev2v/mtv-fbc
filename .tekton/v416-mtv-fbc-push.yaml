@@ -340,7 +340,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-v416-mtv-fbc
   workspaces:
   - name: git-auth
     secret:
