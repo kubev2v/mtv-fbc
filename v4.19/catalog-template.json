@@ -33,12 +33,27 @@
             "schema": "olm.channel"
         },
         {
+            "entries": [
+                {
+                    "name": "mtv-operator.v2.9.0",
+                    "skipRange": "\u003e=0.0.0 \u003c2.9.0"
+                }
+            ],
+            "name": "dev-preview",
+            "package": "mtv-operator",
+            "schema": "olm.channel"
+        },
+        {
             "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:365115407964d182de7e7564438c6fd089e2c0bcc0f94ec48621ca0cc2bf0fe4"
         },
         {
             "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:29ce66f04b7339725d0e3dd7d4cfeca794c33e917e0deef00c44149a86a1c3b9"
+        },
+        {
+            "schema": "olm.bundle",
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:f5895de8be3e4259e6466698f1a76d498afc447c625796a8b5cdf06f440d7cf2"
         }
     ]
 }
