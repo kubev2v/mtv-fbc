@@ -55,7 +55,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.10.0",
     "package": "mtv-operator",
-    "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:072491dfe06d5924a1e78470cbeb196387fef99b59ba20695060750234822689",
+    "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:d19870977fd402ddf25a97b8cc9c8415032256512126ec15720d6284d82c2e3b",
     "properties": [
         {
             "type": "olm.gvk",
@@ -160,8 +160,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a83ddb246af46f297d5b77e2dfdde2ff99ee441b651ddbafc782d99387850d8",
-                    "createdAt": "2025-07-20T08:16:38Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f632a50d4359e5c78907b602eebee4a948e64d4956115e947ae5ebbb0a46e8e6",
+                    "createdAt": "2025-07-23T16:49:55Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -317,11 +317,11 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:072491dfe06d5924a1e78470cbeb196387fef99b59ba20695060750234822689"
+            "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:d19870977fd402ddf25a97b8cc9c8415032256512126ec15720d6284d82c2e3b"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a83ddb246af46f297d5b77e2dfdde2ff99ee441b651ddbafc782d99387850d8"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f632a50d4359e5c78907b602eebee4a948e64d4956115e947ae5ebbb0a46e8e6"
         }
     ]
 }
