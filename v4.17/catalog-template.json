@@ -207,6 +207,10 @@
         {
             "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:2ec876af85d597623ae62262dc73ed897c95528c1f22f6a49c692c588bd8ad87"
+        },
+        {
+            "schema": "olm.bundle",
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-bundle-2-9:c5850d07b327e81ce8c637aafa3f8b64d47eb73b"
         }
     ]
 }
