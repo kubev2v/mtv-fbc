@@ -33,6 +33,9 @@ spec:
     value: v4.17/catalog.Dockerfile
   - name: path-context
     value: .
+  - name: build-args
+    value:
+    - "EVENT_TITLE={{body.pull_request.title}}"
   pipelineSpec:
     description: |
       This pipeline is ideal for building and verifying [file-based catalogs](https://konflux-ci.dev/docs/end-to-end/building-olm/#building-the-file-based-catalog).

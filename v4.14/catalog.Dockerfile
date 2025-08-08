@@ -2,6 +2,8 @@
 # /bin/opm (with a serve subcommand) and /bin/grpc_health_probe
 FROM registry.redhat.io/openshift4/ose-operator-registry:v4.14
 
+ARG EVENT_TITLE
+
 # Configure the entrypoint and command
 ENTRYPOINT ["/bin/opm"]
 CMD ["serve", "/configs", "--cache-dir=/tmp/cache"]
@@ -13,3 +15,4 @@ RUN ["/bin/opm", "serve", "/configs", "--cache-dir=/tmp/cache", "--cache-only"]
 # Set DC-specific label for the location of the DC root directory
 # in the image
 LABEL operators.operatorframework.io.index.configs.v1=/configs
+LABEL mtv-version=v${EVENT_TITLE}
