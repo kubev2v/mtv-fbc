@@ -33,9 +33,6 @@ spec:
     value: v4.18/catalog.Dockerfile
   - name: path-context
     value: .
-  - name: build-args
-    value:
-    - "EVENT_TITLE={{body.pull_request.title}}" 
   pipelineSpec:
     description: |
       This pipeline is ideal for building and verifying [file-based catalogs](https://konflux-ci.dev/docs/end-to-end/building-olm/#building-the-file-based-catalog).
@@ -102,14 +99,7 @@ spec:
       description: Add built image into an OCI image index
       name: build-image-index
       type: string
-    - default: []
-      description: Array of --build-arg values ("arg=value" strings) for buildah
-      name: build-args
-      type: array
-    - default: ''
-      description: Path to a file with build arguments for buildah, see https://www.mankier.com/1/buildah-build#--build-arg-file
-      name: build-args-file
-      type: string
+
     - default:
       - linux/x86_64
       description: List of platforms to build the container images on. The available set of values is determined by the configuration of the multi-platform-controller.
@@ -175,6 +165,22 @@ spec:
       workspaces:
       - name: basic-auth
         workspace: git-auth
+    - name: generate-labels
+      params:
+      - name: label-templates
+        value:
+        - "mtv-version=v{{body.pull_request.title}}"
+      runAfter:
+      - clone-repository
+      taskRef:
+        params:
+        - name: name
+          value: generate-labels
+        - name: bundle
+          value: quay.io/konflux-ci/tekton-catalog/task-generate-labels:0.1@sha256:0068fe8b3c5d010daee5a922781a74cfb82251e775c260d14d9e50dd1a7aca65
+        - name: kind
+          value: task
+        resolver: bundles
     - name: prefetch-dependencies
       params:
       - name: input
@@ -222,11 +228,9 @@ spec:
         value: $(params.image-expires-after)
       - name: COMMIT_SHA
         value: $(tasks.clone-repository.results.commit)
-      - name: BUILD_ARGS
+      - name: LABELS
         value:
-        - $(params.build-args[*])
-      - name: BUILD_ARGS_FILE
-        value: $(params.build-args-file)
+        - $(tasks.generate-labels.results.labels[*])
       - name: SOURCE_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
@@ -235,6 +239,7 @@ spec:
         value: 'true'
       runAfter:
       - clone-repository
+      - generate-labels
       taskRef:
         params:
         - name: name

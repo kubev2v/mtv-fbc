@@ -16,16 +16,50 @@ This directory contains utility and testing scripts for the MTV (Migration Toolk
 
 ## Available Scripts
 
-### `test-event-title.sh`
+### `test-generate-labels-local.sh`
 
-A comprehensive testing script for validating the EVENT_TITLE functionality in the Docker builds and Tekton pipelines.
+A comprehensive local testing script that **simulates the complete generate-labels workflow** end-to-end, including label generation and application.
 
-#### What it tests
+This script provides:
+- Full local simulation of the generate-labels + buildah LABELS workflow
+- Template substitution testing (simulates what Tekton does)
+- Label generation from different event types (pull requests, pushes)
+- Actual label application and verification on container images
+- Comparison between old and new approaches
 
-This script validates that:
-- Docker builds successfully accept the `EVENT_TITLE` build argument
-- The `mtv-version` label is correctly set with the "v" prefix
-- Different types of EVENT_TITLE values work correctly (semver versions, commit messages, PR titles)
+#### Usage
+
+```bash
+# From the project root directory
+./scripts/test-generate-labels-local.sh
+```
+
+#### What this tests
+
+1. **Generate-Labels Simulation**: Simulates the generate-labels task creating labels from templates
+2. **Label Application**: Creates images with labels applied externally (simulating buildah LABELS parameter)
+3. **Template Substitution**: Tests Tekton template substitution ({{body.pull_request.title}}, etc.)
+4. **End-to-End Verification**: Validates the complete workflow produces correct labels
+5. **Multiple Event Types**: Tests both pull request and push event scenarios
+
+#### Expected Output
+
+```
+Testing generate-labels approach locally...
+✅ Using Podman (Docker not available)
+
+🔍 Local Generate-Labels Testing...
+
+Testing pull_request event with value: '1.2.3'
+Generated label: mtv-version=v1.2.3
+Building base image...
+✅ Base build successful
+Applying labels locally (simulating buildah LABELS parameter)...
+✅ Labels applied successfully
+✅ Label verified: mtv-version=v1.2.3
+
+...
+```
 
 #### Prerequisites
 
@@ -41,66 +75,6 @@ This script validates that:
 - Access to the base images specified in the Dockerfiles (Red Hat registry)
 - Sufficient disk space for temporary container images
 
-#### Usage
-
-```bash
-# From the project root directory
-./scripts/test-event-title.sh
-```
-
-#### What the script does
-
-1. **Tests multiple scenarios** with different EVENT_TITLE values:
-   - Semantic version: `1.2.3`
-   - Pre-release version: `2.0.0-rc.1`
-   - Commit message: `Fix critical security issue`
-   - Feature commit: `feat: Add new authentication method`
-   - Version tag: `v3.1.0`
-
-2. **For each test case**:
-   - Builds a Docker image using `v4.20/catalog.Dockerfile`
-   - Passes the test value as `EVENT_TITLE` build argument
-   - Inspects the resulting image for the `mtv-version` label
-   - Verifies the label has the correct "v" prefix
-   - Cleans up the temporary image
-
-#### Expected Output
-
-```
-Testing EVENT_TITLE functionality...
-
-Testing with EVENT_TITLE: '1.2.3'
-Building image with tag: test-mtv-1-2-3
-✅ Build successful
-✅ Label found: mtv-version=v1.2.3
-
-Testing with EVENT_TITLE: '2.0.0-rc.1'
-Building image with tag: test-mtv-2-0-0-rc-1
-✅ Build successful
-✅ Label found: mtv-version=v2.0.0-rc.1
-
-...
-```
-
-#### Troubleshooting
-
-**Build failures:**
-- Ensure Docker is running
-- Check that base images are accessible (Red Hat registry access may be required)
-- Verify you have sufficient disk space
-- Note: Build failures due to missing base images are expected in some environments
-
-**Missing labels:**
-- Check that the Dockerfile has both `ARG EVENT_TITLE` and `LABEL mtv-version=v${EVENT_TITLE}`
-- Ensure the Docker build completed successfully
-
-**Permission errors:**
-- Make sure the script is executable: `chmod +x scripts/test-event-title.sh`
-
-**Red Hat Registry Access:**
-- The base images are from `registry.redhat.io` which may require authentication
-- You can test the Dockerfile syntax without building by running: `docker build --dry-run -f v4.20/catalog.Dockerfile .`
-
 ## Manual Testing
 
 ### Testing Individual Dockerfiles
@@ -108,10 +82,10 @@ Building image with tag: test-mtv-2-0-0-rc-1
 You can test individual Dockerfiles manually:
 
 ```bash
-# Test with a specific version
-docker build -f v4.20/catalog.Dockerfile --build-arg EVENT_TITLE="1.2.3" -t test-mtv:latest .
+# Test basic build (no labels, labels applied externally in production)
+docker build -f v4.20/catalog.Dockerfile -t test-mtv:latest .
 
-# Inspect the result
+# Inspect the result (should not contain mtv-version labels)
 docker inspect test-mtv:latest | grep -A2 -B2 "mtv-version"
 
 # Clean up
@@ -126,8 +100,7 @@ Test all supported OpenShift versions:
 # Test each version directory
 for version in v4.14 v4.15 v4.16 v4.17 v4.18 v4.19 v4.20; do
   echo "Testing $version..."
-  docker build -f $version/catalog.Dockerfile --build-arg EVENT_TITLE="test-version" -t test-$version .
-  docker inspect test-$version | grep mtv-version
+  docker build -f $version/catalog.Dockerfile -t test-$version .
   docker rmi test-$version
 done
 ```
@@ -141,7 +114,7 @@ done
    v1.2.3 - Add new operator support
    ```
 
-2. Check the pipeline logs to ensure `EVENT_TITLE={{body.pull_request.title}}` is passed correctly
+2. Check the pipeline logs to ensure `generate-labels` task creates the correct label template
 
 3. Inspect the resulting image:
    ```bash
@@ -158,7 +131,7 @@ done
    git push origin main
    ```
 
-2. Check the pipeline logs to ensure `EVENT_TITLE={{body.head_commit.message}}` is passed correctly
+2. Check the pipeline logs to ensure `generate-labels` task processes the commit message correctly
 
 3. Inspect the resulting image for the `mtv-version` label
 
@@ -166,25 +139,25 @@ done
 
 ### Check Pipeline Configuration
 
-Verify all Tekton pipeline files have the EVENT_TITLE configuration:
+Verify all Tekton pipeline files have the generate-labels configuration:
 
 ```bash
 # From project root
-grep -r "EVENT_TITLE" .tekton/
+grep -r "generate-labels" .tekton/
 ```
 
-Expected output should show EVENT_TITLE in both pull-request and push pipeline files for all versions.
+Expected output should show generate-labels tasks in both pull-request and push pipeline files for all versions.
 
 ### Check Dockerfile Configuration
 
-Verify all Dockerfiles have the ARG and LABEL:
+Verify all Dockerfiles are clean (no ARG/LABEL for mtv-version):
 
 ```bash
 # From project root
-grep -r "EVENT_TITLE" */catalog.Dockerfile
+grep -r "mtv-version\|EVENT_TITLE" */catalog.Dockerfile
 ```
 
-Expected output should show both `ARG EVENT_TITLE` and `LABEL mtv-version=v${EVENT_TITLE}` for all version directories.
+Expected output should be empty - labels are now applied externally by the build system.
 
 ## Contributing
 
@@ -197,11 +170,11 @@ When adding new scripts to this directory:
 
 ## Files in this directory
 
-- `test-event-title.sh` - Tests EVENT_TITLE functionality across all components
+- `test-generate-labels-local.sh` - Tests generate-labels functionality with full local simulation
 - `README.md` - This documentation file
 
 ## Related Documentation
 
 - [Tekton Pipeline Documentation](../.tekton/)
-- [Docker Build Arguments Documentation](https://docs.docker.com/engine/reference/builder/#arg)
+- [Konflux Generate-Labels Documentation](https://konflux-ci.dev/docs/building/labels-and-annotations/#generating-dynamic-labels-or-annotations)
 - [Container Image Labels](https://docs.docker.com/engine/reference/builder/#label)
