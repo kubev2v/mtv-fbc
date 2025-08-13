@@ -16,6 +16,31 @@ This directory contains utility and testing scripts for the MTV (Migration Toolk
 
 ## Available Scripts
 
+### `test-commit-override.sh`
+
+A comprehensive test script for **commit message override functionality** in pull request pipelines.
+
+This script validates:
+- Conditional template logic that checks for `MTV-Version:` in commit messages
+- Fallback behavior to PR title when no override is found
+- Case sensitivity of the override pattern
+- Pipeline file verification to ensure all PR pipelines are updated
+
+#### Usage
+
+```bash
+# From the project root directory
+./scripts/test-commit-override.sh
+```
+
+#### What this tests
+
+1. **Override Detection**: Tests various commit message patterns with and without `MTV-Version:`
+2. **Fallback Logic**: Validates that PR title is used when no override is detected
+3. **Template Syntax**: Explains the Go template conditional logic used in pipelines
+4. **Pipeline Verification**: Checks that all PR pipeline files have been updated
+5. **Usage Examples**: Demonstrates real-world workflow scenarios
+
 ### `test-generate-labels-local.sh`
 
 A comprehensive local testing script that **simulates the complete generate-labels workflow** end-to-end, including label generation and application.
@@ -170,11 +195,14 @@ When adding new scripts to this directory:
 
 ## Files in this directory
 
+- `test-commit-override.sh` - Tests commit message override functionality for PR pipelines
 - `test-generate-labels-local.sh` - Tests generate-labels functionality with full local simulation
+- `COMMIT_MESSAGE_OVERRIDE.md` - Complete guide for commit message override feature
 - `README.md` - This documentation file
 
 ## Related Documentation
 
+- [Commit Message Override Guide](COMMIT_MESSAGE_OVERRIDE.md) - **How to use commit message overrides in PR pipelines**
 - [Tekton Pipeline Documentation](../.tekton/)
 - [Konflux Generate-Labels Documentation](https://konflux-ci.dev/docs/building/labels-and-annotations/#generating-dynamic-labels-or-annotations)
 - [Container Image Labels](https://docs.docker.com/engine/reference/builder/#label)

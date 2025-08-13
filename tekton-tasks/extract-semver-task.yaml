@@ -1,0 +1,112 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: extract-semver
+  labels:
+    app.kubernetes.io/version: "0.1"
+  annotations:
+    tekton.dev/pipelines.minVersion: "0.17.0"
+    tekton.dev/categories: Utilities
+    tekton.dev/tags: version, semver, commit
+    tekton.dev/displayName: "Extract Semantic Version"
+    tekton.dev/platforms: "linux/amd64"
+spec:
+  description: >-
+    Extract semantic version from commit messages or PR titles.
+    
+    This task processes text to extract clean semantic version numbers:
+    1. Look for MTV-Version: x.x.x override pattern (takes precedence)
+    2. Extract standard semver patterns (v1.2.3, 1.2.3, etc.)
+    3. Fall back to input text if no patterns found
+    
+  params:
+  - name: commit-message
+    description: The commit message to process for version extraction
+    type: string
+  - name: pr-title
+    description: The PR title to use as fallback
+    type: string
+  - name: prefix
+    description: Prefix to add to the extracted version (default 'v')
+    type: string
+    default: "v"
+  results:
+  - name: version
+    description: The extracted version with prefix (e.g., v1.2.3)
+  - name: raw-version
+    description: The extracted version without prefix (e.g., 1.2.3)
+  - name: source
+    description: Source of the version (override|commit-pattern|pr-pattern|fallback)
+  steps:
+  - name: extract
+    image: registry.access.redhat.com/ubi9/ubi-minimal:latest
+    script: |
+      #!/bin/bash
+      set -e
+      
+      COMMIT_MESSAGE="$(params.commit-message)"
+      PR_TITLE="$(params.pr-title)"
+      PREFIX="$(params.prefix)"
+      
+      echo "Processing commit message: $COMMIT_MESSAGE"
+      echo "PR title: $PR_TITLE"
+      
+      # Function to extract version from MTV-Version override
+      extract_override_version() {
+          local text="$1"
+          # Look for MTV-Version: followed by semver pattern
+          echo "$text" | sed -n 's/.*[Mm][Tt][Vv]-[Vv]ersion:[[:space:]]*\(v\?[0-9]\+\.[0-9]\+\.[0-9]\+[^[:space:]]*\).*/\1/p'
+      }
+      
+      # Function to extract semver from standard patterns
+      extract_semver_pattern() {
+          local text="$1"
+          # Look for semver patterns: 1.2.3, v1.2.3, etc.
+          echo "$text" | grep -oE '(v?[0-9]+\.[0-9]+\.[0-9]+[^[:space:]]*)' | head -n1
+      }
+      
+      # Try override pattern first in commit message
+      override_version=$(extract_override_version "$COMMIT_MESSAGE")
+      
+      if [ -n "$override_version" ]; then
+          echo "Found MTV-Version override: $override_version"
+          RAW_VERSION="${override_version#v}"  # Remove v prefix if present
+          SOURCE="override"
+      else
+          # Try semver pattern in commit message
+          commit_semver=$(extract_semver_pattern "$COMMIT_MESSAGE")
+          if [ -n "$commit_semver" ]; then
+              echo "Found semver in commit message: $commit_semver"
+              RAW_VERSION="${commit_semver#v}"  # Remove v prefix if present
+              SOURCE="commit-pattern"
+          else
+              # Try semver pattern in PR title
+              pr_semver=$(extract_semver_pattern "$PR_TITLE")
+              if [ -n "$pr_semver" ]; then
+                  echo "Found semver in PR title: $pr_semver"
+                  RAW_VERSION="${pr_semver#v}"  # Remove v prefix if present
+                  SOURCE="pr-pattern"
+              else
+                  # No semver found, use PR title as fallback
+                  echo "No semver pattern found, using PR title as fallback"
+                  RAW_VERSION="$PR_TITLE"
+                  SOURCE="fallback"
+              fi
+          fi
+      fi
+      
+      # Add prefix to create final version
+      if [[ "$RAW_VERSION" =~ ^v ]]; then
+          FINAL_VERSION="$RAW_VERSION"
+      else
+          FINAL_VERSION="$PREFIX$RAW_VERSION"
+      fi
+      
+      echo "Final version: $FINAL_VERSION"
+      echo "Raw version: $RAW_VERSION"
+      echo "Source: $SOURCE"
+      
+      # Write results
+      echo "$FINAL_VERSION" > "$(results.version.path)"
+      echo "$RAW_VERSION" > "$(results.raw-version.path)"
+      echo "$SOURCE" > "$(results.source.path)"
