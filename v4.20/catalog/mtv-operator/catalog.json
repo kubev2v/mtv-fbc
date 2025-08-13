@@ -44,7 +44,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.10.0",
     "package": "mtv-operator",
-    "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:c99bb3315d7ab155c1e0ff25cb8f0c144fdfe3de5fa31b30f63b496ae5ca97fc",
+    "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:2bd7f4ec8bc4a1dc976de0c0d98b727e14c4cf3be11a83910c233d6ab03f3a73",
     "properties": [
         {
             "type": "olm.gvk",
@@ -149,8 +149,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f632a50d4359e5c78907b602eebee4a948e64d4956115e947ae5ebbb0a46e8e6",
-                    "createdAt": "2025-08-07T16:36:40Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:7c3ebb411c8aa43258e83e1cf47fda4711701cb950537434e708dba0b323d59f",
+                    "createdAt": "2025-08-13T15:43:04Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -306,11 +306,11 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:c99bb3315d7ab155c1e0ff25cb8f0c144fdfe3de5fa31b30f63b496ae5ca97fc"
+            "image": "registry.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:2bd7f4ec8bc4a1dc976de0c0d98b727e14c4cf3be11a83910c233d6ab03f3a73"
         },
         {
             "name": "",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f632a50d4359e5c78907b602eebee4a948e64d4956115e947ae5ebbb0a46e8e6"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:7c3ebb411c8aa43258e83e1cf47fda4711701cb950537434e708dba0b323d59f"
         }
     ]
 }
