@@ -17,3 +17,5 @@ opm_alpha_params() {
   fi
   echo "${params}"
 }
+
+download_opm_client
