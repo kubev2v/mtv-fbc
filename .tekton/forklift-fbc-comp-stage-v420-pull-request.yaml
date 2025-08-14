@@ -12,7 +12,7 @@ metadata:
       == "stage"
       && ( "v4.20/***".pathChanged() || ".tekton/forklift-fbc-comp-stage-v420-pull-request.yaml".pathChanged()
       || "v4.20/catalog.Dockerfile".pathChanged() )
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     appstudio.openshift.io/application: forklift-fbc-stage-v420
     appstudio.openshift.io/component: forklift-fbc-comp-stage-v420
