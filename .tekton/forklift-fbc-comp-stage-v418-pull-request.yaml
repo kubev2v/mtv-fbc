@@ -194,6 +194,22 @@ spec:
         workspace: git-auth
       - name: netrc
         workspace: netrc
+    - name: generate-labels
+      params:
+      - name: label-templates
+        value:
+        - "mtv-version=v{{body.pull_request.title}}"
+      runAfter:
+      - clone-repository
+      taskRef:
+        params:
+        - name: name
+          value: generate-labels
+        - name: bundle
+          value: quay.io/konflux-ci/tekton-catalog/task-generate-labels:0.1@sha256:0068fe8b3c5d010daee5a922781a74cfb82251e775c260d14d9e50dd1a7aca65
+        - name: kind
+          value: task
+        resolver: bundles
     - matrix:
         params:
         - name: PLATFORM
@@ -217,7 +233,7 @@ spec:
         value: $(tasks.clone-repository.results.commit)
       - name: LABELS
         value:
-        - "mtv-version=v{{if contains (body.head_commit.message) \"MTV-VERSION\"}}{{body.head_commit.message}}{{else}}{{body.pull_request.title}}{{end}}"
+        - "$(tasks.generate-labels.results.labels[*])"
       - name: SOURCE_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
