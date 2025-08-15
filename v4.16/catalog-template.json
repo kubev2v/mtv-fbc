@@ -266,10 +266,6 @@
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:d8753e530f149378208d8e81ff397d5e4a078b193fc7ecfd8ef0500468b918ef"
-        },
-        {
-            "schema": "olm.bundle",
             "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:a162e60f7aa16d4bbff716a2a6794a35570ccbbc467885b72f188475a14eb8bc"
         },
         {
@@ -291,10 +287,6 @@
         {
             "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:d8753e530f149378208d8e81ff397d5e4a078b193fc7ecfd8ef0500468b918ef"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:a50460eebd15d1a056389dfc7473040df0b419dccb32f5235577805ea6f5f028"
         },
         {
             "schema": "olm.bundle",

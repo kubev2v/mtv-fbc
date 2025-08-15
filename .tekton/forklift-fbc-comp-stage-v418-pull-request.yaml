@@ -226,6 +226,7 @@ spec:
         value: 'true'
       runAfter:
       - clone-repository
+      - generate-labels
       taskRef:
         params:
         - name: name
