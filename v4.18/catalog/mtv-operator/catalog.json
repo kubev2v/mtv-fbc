@@ -3704,7 +3704,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.9.3",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-bundle-2-9@sha256:4e6b64cbb00910feda212566ea986428fd8a4c3a12bf4db2c622fcf2a046af29",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-bundle-2-9@sha256:81bb6326aa35673ff84b29f1640a94aa5cc1dc6adb3d8d798b83c7326ecfc3f2",
     "properties": [
         {
             "type": "olm.gvk",
@@ -3809,8 +3809,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:96c5ceff2569fa64217d942af5c804873bd6d4f9cf25d4e340143d3aea9a220e",
-                    "createdAt": "2025-08-14T19:19:23Z",
+                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:71d94260c96f606de8d875624a95620387549a9979daef1ba24078ad226cac9c",
+                    "createdAt": "2025-08-19T17:53:44Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -3966,11 +3966,11 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-bundle-2-9@sha256:4e6b64cbb00910feda212566ea986428fd8a4c3a12bf4db2c622fcf2a046af29"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-bundle-2-9@sha256:81bb6326aa35673ff84b29f1640a94aa5cc1dc6adb3d8d798b83c7326ecfc3f2"
         },
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:3331dcca6e32df1f62ede68af0838be9257c028ea93dd865d55054052252669b"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:b4a51d638fd05e64b22aeac095c6e5d118e902803bf2654766e7bc837518af91"
         },
         {
             "name": "ui_plugin",
@@ -3978,7 +3978,7 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:b6c37303c931ee0343dc6ef04c1ae7a4f380d6037ddab7683eebcaa27574a7e4"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:8cd56ecd6dd0791b250c6799860270363d3f337b2f9acb4556de52ebf752321f"
         },
         {
             "name": "must_gather",
@@ -3986,35 +3986,35 @@
         },
         {
             "name": "openstack_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:d3a34e813aeaf2d653d678fbf4a5add51a43c6b1d0bd1c9b6cfaa2f4613282cc"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:b75ff444737f9d3a84fb5e885044d5a5809642d0935113e0870f06480aa69d95"
         },
         {
             "name": "ova_provider_server",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:3716d0738d93eb9d3a23ece96e891ee6d896a53a59cd335c291f81096ec3f30c"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:ec5fbfcb22971dd4213060862916e8d7e83bf1113e86de51523961c3b7bf6ba6"
         },
         {
             "name": "populator_controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-populator-controller-rhel9@sha256:acf6e3d73aa659109843dfe58f2ab87a2a85debe70a5d38df832c03476f38138"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-populator-controller-rhel9@sha256:08470810768ea959395a0742a58bea62e12311a911c53a95a063013495918918"
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:96c5ceff2569fa64217d942af5c804873bd6d4f9cf25d4e340143d3aea9a220e"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:71d94260c96f606de8d875624a95620387549a9979daef1ba24078ad226cac9c"
         },
         {
             "name": "rhv_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhv-populator-rhel8@sha256:3a7dbf78fbe1b5904ca1463664d97fd5397d626eb26cbeba3422d97924d51e95"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhv-populator-rhel8@sha256:e31366213983323ba12b28932b978782e0205915da96f1004d27d028b9264eba"
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-validation-rhel9@sha256:00c0fa3b8317788ea1efa9568f2cc02b7f3c6622d85b75286d3fe84fd3ac31ff"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-validation-rhel9@sha256:8dec401509fcc5fb6da577551b4935cd2398e7284f26f03fe306368f391eee40"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:f3ddf8cbedfdcb29026c3b453d1097b201f3150306ec3a0c79f12b14f519b29c"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:a5750ce676cf315aceb10db84102c72b41ef65177128830f8e34ba52f351d960"
         },
         {
             "name": "vsphere_xcopy_volume_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:9e40eefe770739c52ebeb831eeedc6fc541e6148ad2ce3fbf640821d4c6af5f1"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:a7a8c22dc1eb296a3e43eb719999024905b9761bebea1d6e91206cd022bd5685"
         }
     ]
 }
