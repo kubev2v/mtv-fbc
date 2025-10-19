@@ -44,7 +44,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:7ecf711fda026ff4b4279bfb205a4b3100ec002c93e8026b3640f0c908522183",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20f11c8d9510f23df6c5571591789df8c2bc45e9e5a4a5402206cfc3685c1cc1",
     "properties": [
         {
             "type": "olm.gvk",
@@ -83,6 +83,14 @@
             "value": {
                 "group": "forklift.konveyor.io",
                 "kind": "NetworkMap",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "OVAProviderServer",
                 "version": "v1beta1"
             }
         },
@@ -149,8 +157,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f3b38e5b507c90b687e1748bea2d034a2ee0dd45fd6dd9dca68a7e37945a604c",
-                    "createdAt": "2025-10-15T14:14:21Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:ee363946d0c2faaaf2109e9ce903155f4afc17fb4d317f81134e3af289db0da1",
+                    "createdAt": "2025-10-19T09:03:49Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -217,6 +225,13 @@
                             "description": "OpenStack Volume Populator"
                         },
                         {
+                            "name": "ovaproviderservers.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "OVAProviderServer",
+                            "displayName": "OVAProviderServer",
+                            "description": "OVA Provider Server"
+                        },
+                        {
                             "name": "ovirtvolumepopulators.forklift.konveyor.io",
                             "version": "v1beta1",
                             "kind": "OvirtVolumePopulator",
@@ -253,7 +268,7 @@
                         }
                     ]
                 },
-                "description": "The Migration Toolkit for Virtualization Operator manages the deployment and life cycle of Migration Toolkit for Virtualization on [OpenShift](https://www.openshift.com/) Container Platform.\n\n### Installation\n\nOpenShift Virtualization must be installed on an OpenShift migration target cluster before you can use MTV to transfer any VMs to that cluster\n\nOnce you have successfully installed the Operator, proceed to deploy components by creating the required ForkliftController CR.\n\nBy default, the Operator installs the following components on a target cluster:\n\n* Controller, to coordinate migration processes.\n* UI, the web console to manage migrations.\n* Validation, a service to validate migration workflows.\n\n### Compatibility\n\nMigration Toolkit for Virtualization 2.7 is supported on OpenShift 4.15, 4.16 and 4.17\n\nMigration Toolkit for Virtualization 2.8 is supported on OpenShift 4.16, 4.17 and 4.18\n\nMore information on compatibility in the [MTV Lifecycle document](https://access.redhat.com/support/policy/updates/migration-toolkit-for-virtualization).\n\n### Documentation\nDocumentation can be found on the [Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/).\n\n### Getting help\nIf you encounter any issues while using Migration Toolkit for Virtualization Operator, create a [support case](https://access.redhat.com/support/cases/) for bugs, enhancements, or other requests.\n\n### Contributing\nYou can contribute by:\n\n* Creating a case in the [Red Hat Customer Portal](https://access.redhat.com/support/cases/) with any issues you find using Migration Toolkit for Application and its Operator.\n* Fixing issues by opening Pull Requests in the [KubeV2V](https://github.com/kubev2v/) under Forklift Projects.\n* Improving Forklift upstream [documentation](https://github.com/kubev2v/forklift-documentation/).\n",
+                "description": "The Migration Toolkit for Virtualization Operator manages the deployment and life cycle of Migration Toolkit for Virtualization on [OpenShift](https://www.openshift.com/) Container Platform.\n\n### Installation\n\nOpenShift Virtualization must be installed on an OpenShift migration target cluster before you can use MTV to transfer any VMs to that cluster\n\nOnce you have successfully installed the Operator, proceed to deploy components by creating the required ForkliftController CR.\n\nBy default, the Operator installs the following components on a target cluster:\n\n* Controller, to coordinate migration processes.\n* UI, the web console to manage migrations.\n* Validation, a service to validate migration workflows.\n\n### Compatibility\n\nMigration Toolkit for Virtualization 2.10 is supported on OpenShift 4.18, 4.19 and 4.20\n\nMigration Toolkit for Virtualization 2.11 is supported on OpenShift 4.19, 4.20 and 4.21\n\nMore information on compatibility in the [MTV Lifecycle document](https://access.redhat.com/support/policy/updates/migration-toolkit-for-virtualization).\n\n### Documentation\nDocumentation can be found on the [Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/).\n\n### Getting help\nIf you encounter any issues while using Migration Toolkit for Virtualization Operator, create a [support case](https://access.redhat.com/support/cases/) for bugs, enhancements, or other requests.\n\n### Contributing\nYou can contribute by:\n\n* Creating a case in the [Red Hat Customer Portal](https://access.redhat.com/support/cases/) with any issues you find using Migration Toolkit for Application and its Operator.\n* Fixing issues by opening Pull Requests in the [KubeV2V](https://github.com/kubev2v/) under Forklift Projects.\n* Improving Forklift upstream [documentation](https://github.com/kubev2v/forklift-documentation/).\n",
                 "displayName": "Migration Toolkit for Virtualization Operator",
                 "installModes": [
                     {
@@ -306,11 +321,11 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:f3b38e5b507c90b687e1748bea2d034a2ee0dd45fd6dd9dca68a7e37945a604c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:ee363946d0c2faaaf2109e9ce903155f4afc17fb4d317f81134e3af289db0da1"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:7ecf711fda026ff4b4279bfb205a4b3100ec002c93e8026b3640f0c908522183"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20f11c8d9510f23df6c5571591789df8c2bc45e9e5a4a5402206cfc3685c1cc1"
         }
     ]
 }
