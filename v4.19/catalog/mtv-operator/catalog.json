@@ -1143,7 +1143,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:413fe5c7aa334f5f0179b984a401ee631e4927e82225e40329772b860b755f48",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:df8dae9884256e1e8c5ee42e799a3c8508acdd957359ef695e956b24fdc375c3",
     "properties": [
         {
             "type": "olm.gvk",
@@ -1257,7 +1257,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:8812fa2efe6a85a46cf79a43cda93ce7277c764b0ce0c59e55b9feaa0147f0e8",
-                    "createdAt": "2025-11-04T13:28:10Z",
+                    "createdAt": "2025-11-04T17:51:17Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -2191,7 +2191,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:73f304feee3912a073afe865eeaa8b68573a54fc41dcd38a9cd9f46a50173512"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:341adfd485642c05a5ac188d006b631054dd9be1dc888f4046495c6b3729d4a8"
         },
         {
             "name": "controller",
@@ -2239,7 +2239,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:413fe5c7aa334f5f0179b984a401ee631e4927e82225e40329772b860b755f48"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:df8dae9884256e1e8c5ee42e799a3c8508acdd957359ef695e956b24fdc375c3"
         }
     ]
 }
