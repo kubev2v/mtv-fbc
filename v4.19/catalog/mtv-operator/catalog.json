@@ -1148,7 +1148,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:b51960ddbedfa93ff7887cbabc679f4ef6e52c13211a33f953bbe62164c3327a",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:fa2d8e183ed227e26e61c4f5889d41233a4aa754629ca5112fa74ce19a166a58",
     "properties": [
         {
             "type": "olm.gvk",
@@ -1261,8 +1261,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:51b608b522e411431597b12bdac8d1b9250167a6243af0bcf65abd80ed9e3435",
-                    "createdAt": "2025-11-20T15:09:57Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:e3b4fa417a20e4e878f65cb823f721c9722293afb1ea99cba3f5a8acb2629f39",
+                    "createdAt": "2025-11-24T15:26:24Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -2188,7 +2188,7 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:b51960ddbedfa93ff7887cbabc679f4ef6e52c13211a33f953bbe62164c3327a"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:fa2d8e183ed227e26e61c4f5889d41233a4aa754629ca5112fa74ce19a166a58"
         },
         {
             "name": "api",
@@ -2200,7 +2200,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:89a08131b1324ad33ea9379353816ecab6fd3fcecf86d269133ae578c984bd2a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:5c4d889eefda44b6ac7f6ea0b45820b1c8022fcd71e51d5440c3ae664cd7f348"
         },
         {
             "name": "controller",
@@ -2216,7 +2216,7 @@
         },
         {
             "name": "ova_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:42264127976b49d8a0438eb0febb8f5ebbbd288ec2701644f5452d0524de8d1a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:3698fc3663511531565ee6abc61b2c9a19c10b7887742bd0ffd7d599bb21b29c"
         },
         {
             "name": "ova_proxy",
@@ -2228,7 +2228,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:51b608b522e411431597b12bdac8d1b9250167a6243af0bcf65abd80ed9e3435"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:e3b4fa417a20e4e878f65cb823f721c9722293afb1ea99cba3f5a8acb2629f39"
         },
         {
             "name": "rhv_populator",
@@ -2236,11 +2236,11 @@
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:09fa192ae8a784b1827c151ead2123ae9e2cc1466d56194cdbf1593fab2d40c4"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:367b08d4c3e3befc9b9599777c8eccaa0a73a18c63eb08feea0fa7b7eb18a424"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:d848985a5b9ea92ec0df2dcad2b60043dd2749aa07d2c9dbf3919269f185422c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:596a13db5177ae88bd0c8007befbea38f8dac9d686c52ebf1c674549ebc1cec4"
         },
         {
             "name": "vsphere_xcopy_volume_populator",
