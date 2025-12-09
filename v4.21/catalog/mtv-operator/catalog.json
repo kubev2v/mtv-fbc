@@ -44,7 +44,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:ff743081e0d0e22774f32a518998050687c1a8875e33ea525727a21fcfa1d3ab",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:fda7bcaaa207c4dd900399c0d93cf0c553e12e49e4deb84cee8754274d397953",
     "properties": [
         {
             "type": "olm.gvk",
@@ -157,8 +157,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:e3b4fa417a20e4e878f65cb823f721c9722293afb1ea99cba3f5a8acb2629f39",
-                    "createdAt": "2025-11-26T06:54:59Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:3a61bde1d0cbf71c7b96cb006d29674eddb6947f830ec772d426a71a550e5eba",
+                    "createdAt": "2025-12-09T23:01:15Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -919,6 +919,38 @@
                                     ]
                                 },
                                 {
+                                    "path": "populator_container_limits_cpu",
+                                    "displayName": "Volume Populator CPU Limit",
+                                    "description": "Volume Populator CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_limits_memory",
+                                    "displayName": "Volume Populator Memory Limit",
+                                    "description": "Volume Populator memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_requests_cpu",
+                                    "displayName": "Volume Populator CPU Request",
+                                    "description": "Volume Populator CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_requests_memory",
+                                    "displayName": "Volume Populator Memory Request",
+                                    "description": "Volume Populator memory request (default 512Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
                                     "path": "controller_log_level",
                                     "displayName": "Controller Log Level",
                                     "description": "Log verbosity level (default 3)",
@@ -1084,27 +1116,27 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:ff743081e0d0e22774f32a518998050687c1a8875e33ea525727a21fcfa1d3ab"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:fda7bcaaa207c4dd900399c0d93cf0c553e12e49e4deb84cee8754274d397953"
         },
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:e66cd50d8b419c160a9386c2eaab83feedb21f90cbb84bd31c4d2a4495c9f74f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:a14b67662af91d7d3b7349ec9511732044126c9858af0df158fd5d54e17c02b5"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:d9cf426ff755d6b9b09a2aca1e54407b5c7397177e10e827bebc345e1552a89b"
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:bc3d4cac747e063b251a915bdf1354cf40a34f03c1f6857b1e2e58823f0cc6e8"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:5c4d889eefda44b6ac7f6ea0b45820b1c8022fcd71e51d5440c3ae664cd7f348"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:51a8da71aa5d19378f878ac1256811825ca867c489aaed7c62f8db78d1f7c05e"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:a3b86664940c4138c45eacbc1c269487f3c2297782f872e26f023189ba1aec8e"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:bf9f9a9eb042845492c91309174c0eaf0fd584dc29cc9ca5b597066e7c334369"
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:d8303b387d12d383148a2cd81ae719cf3468e00a9f18d8536de819a4020a54c7"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:eb54f632bd158f1c3674b16126f5361c9a24df0571d0a52a1a354ab0a7329d8a"
         },
         {
             "name": "openstack_populator",
@@ -1120,11 +1152,11 @@
         },
         {
             "name": "populator_controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:2dd805ba7d212dc183e7089906159130974fa28d762678e6232dbd9775b69da9"
+            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:fe34492bbe0759b0a60285e22524b48edc4ca70ab4ab725900b4fe0701de7b9d"
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:e3b4fa417a20e4e878f65cb823f721c9722293afb1ea99cba3f5a8acb2629f39"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:3a61bde1d0cbf71c7b96cb006d29674eddb6947f830ec772d426a71a550e5eba"
         },
         {
             "name": "rhv_populator",
@@ -1132,15 +1164,15 @@
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:0649d6beef0181b3b189481832fc765cb32fd6ed7d12721e8a28f1eca5dc8b68"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:881ee1150cee1aede3dd628bd8202335ba97fa64885e13c4d16bdc69cebe05ca"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:596a13db5177ae88bd0c8007befbea38f8dac9d686c52ebf1c674549ebc1cec4"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:4c7bdd85779491c19dc6b119b222b42aea6e1bc53fd54f141780f9f220409195"
         },
         {
             "name": "vsphere_xcopy_volume_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:5557730d8f793b28f7999cc290f16e498a950b0c0fe85b1c0c1dbad221e999b5"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:9ed0cfce31d16653946e8a69776abe0f0a6eb939c1bdb990027cf9cf99d420b4"
         }
     ]
 }
