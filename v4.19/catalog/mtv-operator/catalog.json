@@ -3366,7 +3366,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:5ed9d78811425725273c4878105854958bfaf6edb647d5807a2a6b60836fa652",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:307870ddfc843809310e9202a915d5c0575f382c887f89481f3384e81620fb34",
     "properties": [
         {
             "type": "olm.gvk",
@@ -3480,7 +3480,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:99b85030eac521ae47222d78d9805a1c3494a51831a6b23c09f01c936286d4d1",
-                    "createdAt": "2025-12-21T14:25:39Z",
+                    "createdAt": "2026-01-05T10:31:02Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -4438,11 +4438,11 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:5ed9d78811425725273c4878105854958bfaf6edb647d5807a2a6b60836fa652"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:307870ddfc843809310e9202a915d5c0575f382c887f89481f3384e81620fb34"
         },
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:6cca1e4ef2be152e7821ccce20b8023c51bc075eef37486ec1cfd8c9c0f7298c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:f551e935e3cdd5b46e9649776fcfec82e8b981a2e746b828df0b6357d400e610"
         },
         {
             "name": "cli_download",
@@ -4450,11 +4450,11 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:fb6465df079495877b16b2869908d94bc5ad3ee2a60ad2011230c4b542ab4d34"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:2d66c1ead7405b9c99f3d9a543d8de52e0975c7f5c65b493b6fa83aafd255a2c"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:26eb893f68d5aa1970790cc36c8d4f0c271b7dffbe718c2c6dc30262914f165a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:4179cb36a848ab2417681d261f8db17c5d03924d5cdf3e80e845c32043cde22a"
         },
         {
             "name": "must_gather",
@@ -4494,7 +4494,7 @@
         },
         {
             "name": "vsphere_xcopy_volume_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:b7e8f962915483ff838afc413810ce931c00ba594e88d50d8dd3a328a5bd96f4"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:3fde88071cc8d0f16d824f53bb6a1c608e382a5d35dd73f72e5168ac2d0ad104"
         }
     ]
 }
