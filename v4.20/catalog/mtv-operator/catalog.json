@@ -4434,7 +4434,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:3e4ffa890a8843d76a870d0a7076652d6d5f7f9e3587e279c31eb61a69f5a6be",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:5052b4b637d2af46a74259c8455a0484fb3cb6eaa4d8a2e54873072decb5f7de",
     "properties": [
         {
             "type": "olm.gvk",
@@ -4556,7 +4556,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:4ef783108e2269d89d64f36688103bf2313e75abcff88c9681bb5ccb3967d017",
-                    "createdAt": "2026-01-15T07:21:06Z",
+                    "createdAt": "2026-01-15T15:48:19Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5515,7 +5515,7 @@
         },
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:3e4ffa890a8843d76a870d0a7076652d6d5f7f9e3587e279c31eb61a69f5a6be"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:5052b4b637d2af46a74259c8455a0484fb3cb6eaa4d8a2e54873072decb5f7de"
         },
         {
             "name": "api",
@@ -5527,7 +5527,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:fcebe8452c3567152ad212754a75f1bd3feba24df84e5fa6a1d49baa1692213c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:7fa110aafa86fa06bb66aa31c3132b6e95bdaad8673dcdbffb985d6cb5d2f9b2"
         },
         {
             "name": "controller",
