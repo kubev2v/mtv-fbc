@@ -4428,7 +4428,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.10.4",
     "package": "mtv-operator",
-    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-bundle-2-10@sha256:eb65f6b4072b44184d60bc559d1fd7ff8fd8e67fc1f1e342bc8ce4e96c263ab2",
+    "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-bundle-2-10@sha256:0c6931942be2a6db8045b22d1645d5384083b60df4ac8a3ee09a9a5999da0e23",
     "properties": [
         {
             "type": "olm.gvk",
@@ -4542,7 +4542,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:5c7663853f24538d9a15a0c3dd648279a2da9a328d2af0c467357e1c6ae060e5",
-                    "createdAt": "2026-01-23T07:21:49Z",
+                    "createdAt": "2026-01-25T12:18:09Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5468,7 +5468,7 @@
     "relatedImages": [
         {
             "name": "",
-            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-bundle-2-10@sha256:eb65f6b4072b44184d60bc559d1fd7ff8fd8e67fc1f1e342bc8ce4e96c263ab2"
+            "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-bundle-2-10@sha256:0c6931942be2a6db8045b22d1645d5384083b60df4ac8a3ee09a9a5999da0e23"
         },
         {
             "name": "api",
@@ -5480,7 +5480,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:d59cf6d407417f6d086322d5838893f78597a89b4bb0e3921fd9c2c8f6270ca6"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:01a8e30cb20fbb858a188ec491eaffc37e6fc587249eeadb7be144ecaad45e9b"
         },
         {
             "name": "controller",
@@ -5488,7 +5488,7 @@
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel8@sha256:b701d194f2b6f0412b377897c682236243a066185a150b94cee18ff403044093"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel8@sha256:864334cf0aeb50776493c877b145893ca93aa7bf6774cd22bdbe7e34eab7f75a"
         },
         {
             "name": "openstack_populator",
