@@ -93,6 +93,11 @@
           "name": "mtv-operator.v2.9.6",
           "replaces": "mtv-operator.v2.9.5",
           "skipRange": ">=0.0.0 <2.9.6"
+        },
+        {
+          "name": "mtv-operator.v2.9.7",
+          "replaces": "mtv-operator.v2.9.6",
+          "skipRange": ">=0.0.0 <2.9.7"
         }
       ],
       "name": "release-v2.9",
@@ -152,6 +157,10 @@
       "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:2b5b5fd045b60dff0d0034b212b9382b3db036ac3418ae7d424c26ad8341636b"
     },
     {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:f744b3832d6f2232b9dd605ff0ca8934acf279e8f065150d0a170104b290271e"
+    },
+    {
       "entries": [
         {
           "name": "mtv-operator.v2.11.0",
@@ -164,7 +173,7 @@
     },
     {
       "schema": "olm.bundle",
-      "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:f85a950df11a9c76aae26e0032434b6812ec74088235d0800dc7d0d3307edd19"
+      "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview@sha256:534f487d76d9eca1a3a0b84de0eb9112cb8f63edb115aa65b55fbcd176791069"
     }
   ]
 }
