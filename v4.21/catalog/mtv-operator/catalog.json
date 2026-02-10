@@ -44,7 +44,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:898451acbe8e8b90d3cc2f25450e156d5d7c42d0a9a87f3c1a074e6a3f40f3b5",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:1d1b36745642f145b2a437c2c9e4ff5a26588bdbe08d69dc1613e3d6700616f6",
     "properties": [
         {
             "type": "olm.gvk",
@@ -166,7 +166,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:ce7d336471ea31a64aafcebb6ab1d7ce4c222ced2e58333a9d5cc062c74b06dd",
-                    "createdAt": "2026-02-08T14:33:59Z",
+                    "createdAt": "2026-02-09T17:38:30Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -1133,7 +1133,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:4a00490f8f309d2b25ab1b3102826bde1e0c02f9ae42cde633e157f1f7812fa1"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:7698d8a949f6aaa5951ba90d54f46dca06a3e6b9375d2b76c1982e80d94626c1"
         },
         {
             "name": "controller",
@@ -1181,7 +1181,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:898451acbe8e8b90d3cc2f25450e156d5d7c42d0a9a87f3c1a074e6a3f40f3b5"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:1d1b36745642f145b2a437c2c9e4ff5a26588bdbe08d69dc1613e3d6700616f6"
         }
     ]
 }
