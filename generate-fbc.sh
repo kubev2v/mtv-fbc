@@ -12,7 +12,7 @@ helpFunction()
   echo -e "Usage: $0\n"
   echo -e "\t--help:   see all commands of this script\n"
   echo -e "\t--init <OCP_minor>:   init catalog fragment for ocp version from existing index\n\t  example: $0 --init v4.14\n"
-  echo -e "\t--render-template <OCP_minor>:   render catalog template for ocp version\n\t  example: $0 --render-template v4.14\n"
+  echo -e "\t--render-template <OCP_minor> [--template <template_file>]:   render catalog template for ocp version\n\t  example: $0 --render-template v4.14\n\t  example: $0 --render-template v4.20 --template catalog-template-dry-run.json\n"
   exit 1
 }
 
@@ -71,7 +71,25 @@ case $cmd in
       echo "Please specify OCP minor, eg: v4.14"
       exit 1
     fi
-    ./opm alpha render-template basic $(opm_alpha_params "${frag}") "${frag}/catalog-template.json" > "${frag}/catalog/${package_name}/catalog.json"
+    shift 2
+    template_file="${frag}/catalog-template.json"
+    while [ $# -gt 0 ]; do
+      if [ "$1" = "--template" ] && [ -n "$2" ]; then
+        if [[ "$2" == /* ]]; then
+          template_file="$2"
+        else
+          template_file="${frag}/$2"
+        fi
+        shift 2
+        break
+      fi
+      shift
+    done
+    if [ ! -f "${template_file}" ]; then
+      echo "Template not found: ${template_file}"
+      exit 1
+    fi
+    ./opm alpha render-template basic $(opm_alpha_params "${frag}") "${template_file}" > "${frag}/catalog/${package_name}/catalog.json"
     ;;
   *)
     echo "$cmd not one of the allowed flags"
