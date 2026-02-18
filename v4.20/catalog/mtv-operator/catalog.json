@@ -6652,7 +6652,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:5267deb8d44b01d0556f2246c21957587b9a82375bace43f41baafc790cd1d81",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:57c24191b56ce6e2a29320861829600a2a52d6dcab48bb81209311af203c4579",
     "properties": [
         {
             "type": "olm.gvk",
@@ -6774,7 +6774,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:85114965f449c46f1433710af1c4ce4c9f63aae4d52e47d83d0cf94e2ab427d4",
-                    "createdAt": "2026-02-17T08:51:37Z",
+                    "createdAt": "2026-02-17T09:07:05Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -7733,7 +7733,7 @@
         },
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:bceab0141ceafc9e24998da2a2777bd9662ea07cf8ab4fdaedb1608accaffbaf"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:9bb50f5f24a657ae3bdec6426be76a57b12aaed48ce0bdcbe7809124dc785118"
         },
         {
             "name": "cli_download",
@@ -7745,7 +7745,7 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:5993f3087bc1430c2f1a525427582a69d51e82362ba084434325c79f879091bd"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:deb78b54e3d7dda251908147219cdfb480239d3f707462281a93c7fc6bfa4ec9"
         },
         {
             "name": "must_gather",
@@ -7789,7 +7789,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:5267deb8d44b01d0556f2246c21957587b9a82375bace43f41baafc790cd1d81"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:57c24191b56ce6e2a29320861829600a2a52d6dcab48bb81209311af203c4579"
         }
     ]
 }
