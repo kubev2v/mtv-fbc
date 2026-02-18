@@ -10,7 +10,7 @@ metadata:
     # Run when pushing tag fbc-dry-run/v4.22. Before tagging, run:
     #   ./generate-fbc.sh --render-template v4.22 --template catalog-template-dry-run.json
     # and commit v4.22/catalog, then push and push the tag.
-    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && ref == "refs/tags/fbc-dry-run/v4.22"
+    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "refs/tags/fbc-dry-run/v4.22"
   creationTimestamp:
   labels:
     appstudio.openshift.io/application: forklift-fbc-stage-v422-dry-run
