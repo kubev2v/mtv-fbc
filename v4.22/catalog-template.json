@@ -53,7 +53,7 @@
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:85e266d3c17864a645bef7ca39a0e553e138bc517712eaeaac98ac088c612d7e"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:9a946feb8768c5afd16eeaf6fd64711c597b19a4a5767c69bee7c25ac7c2c4b1"
         }
     ]
 }
