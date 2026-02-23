@@ -7585,7 +7585,8 @@
                                 {
                                     "path": "metric_interval",
                                     "displayName": "Metric Interval",
-                                    "description": "Metrics scrape interval (default 30s)",
+                                    "descri
+ption": "Metrics scrape interval (default 30s)",
                                     "x-descriptors": [
                                         "urn:alm:descriptor:com.tectonic.ui:hidden"
                                     ]
