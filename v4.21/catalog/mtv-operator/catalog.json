@@ -1137,7 +1137,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.0",
     "package": "mtv-operator",
-    "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:57c24191b56ce6e2a29320861829600a2a52d6dcab48bb81209311af203c4579",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73efdf4a84ebfbe56fa7eaf71df7d3ca1e33381d8ff2908f30ac65a3333d1f4e",
     "properties": [
         {
             "type": "olm.gvk",
@@ -1259,7 +1259,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:85114965f449c46f1433710af1c4ce4c9f63aae4d52e47d83d0cf94e2ab427d4",
-                    "createdAt": "2026-02-17T09:07:05Z",
+                    "createdAt": "2026-02-26T11:21:12Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -2213,10 +2213,6 @@
     ],
     "relatedImages": [
         {
-            "name": "hyperv_provider_server",
-            "image": ""
-        },
-        {
             "name": "api",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:9bb50f5f24a657ae3bdec6426be76a57b12aaed48ce0bdcbe7809124dc785118"
         },
@@ -2239,10 +2235,6 @@
         {
             "name": "openstack_populator",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:8ae1f3a90d8d7364e9f2c640fe8be269db140279ca6f2dc1486cff81adacbbc5"
-        },
-        {
-            "name": "",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:57c24191b56ce6e2a29320861829600a2a52d6dcab48bb81209311af203c4579"
         },
         {
             "name": "ova_provider_server",
@@ -2275,6 +2267,10 @@
         {
             "name": "vsphere_xcopy_volume_populator",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:70de0edf45202481561d346691226d5fce1f829175a29e783ec489b4d3fec093"
+        },
+        {
+            "name": "",
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73efdf4a84ebfbe56fa7eaf71df7d3ca1e33381d8ff2908f30ac65a3333d1f4e"
         }
     ]
 }
