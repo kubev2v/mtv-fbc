@@ -2289,7 +2289,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:24894ed7e379a482557adde69b6f5b99f6983499e8ed146f995c1aa3aa94a1b7",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:76b62b4ad85b6cd786b88d1b0b3a4067c8ebf78c61d745fea2c29ec1f9b20cbf",
     "properties": [
         {
             "type": "olm.gvk",
@@ -2410,8 +2410,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:822f79232cba5f3bae93dd3d7a3742ee4456b9e2525cbce85240de7ecc14c323",
-                    "createdAt": "2026-03-03T13:47:53Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:92a090d97d25e0f3b708af3c7998dfed69b39446c09c3ecfc8342c4095b2f17b",
+                    "createdAt": "2026-03-05T13:49:28Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -3036,6 +3036,22 @@
                                     ]
                                 },
                                 {
+                                    "path": "virt_v2v_memsize",
+                                    "displayName": "Virt-v2v Memory Size",
+                                    "description": "Memory (in MB) allocated for the virt-v2v conversion appliance",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_smp",
+                                    "displayName": "Virt-v2v SMP",
+                                    "description": "Number of virtual CPUs for the virt-v2v conversion appliance",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
                                     "path": "virt_v2v_dont_request_kvm",
                                     "displayName": "Virt-v2v Don't Request KVM",
                                     "description": "Don't request KVM for virt-v2v",
@@ -3378,19 +3394,19 @@
         },
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:0ab4bdffb53f85666711bfa2103e03f831997a4e379f3e8b47bfe361fa491e09"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:5110347c7afd7fdabd29beda229016b05dbfc9a1038421b96636c0a697a0f289"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:66755f4c7fee6954e85a596dd9dfedf51bfefe466db28265d5db3e4828055b2f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:be271787e0f0b63a4f6b219a5b04f7138dda676c1b5cd7c77128927fa24437a5"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:b09b3eb5b45ca4e4b9b09b9cf80a24d8d553f9fe373b708d1f62673b71f7470b"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:2133dfbbf4ddbe40049fbc2582198a55e6808d2502b01fca5afe1a9800e8b318"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:f7bd81b0abdf8dea47037ab973304edab5c204cb54d0aa4f2252e20998255a3a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:f1928534e82bb00035448a9fae300858191a05a6eec1301bdbf72c16c94e1285"
         },
         {
             "name": "must_gather",
@@ -3414,7 +3430,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:822f79232cba5f3bae93dd3d7a3742ee4456b9e2525cbce85240de7ecc14c323"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:92a090d97d25e0f3b708af3c7998dfed69b39446c09c3ecfc8342c4095b2f17b"
         },
         {
             "name": "rhv_populator",
@@ -3426,15 +3442,15 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:7ca3cae9a85f19f23d9aa4161d345a50d2350b82141798ab0ff7d90fc766a17c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:f9e18fa1cbab579ec9315253cad31c24f43d83dc161fd6e9b334a6df9880df7d"
         },
         {
             "name": "vsphere_xcopy_volume_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:216d8e1ea225c6e0091d0b4f0c672a81dff131db8224a4d40623a02e5e4c0130"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:6a1c7f87c555f1055931b9a1b54c2dd8f4520130ffaf14742ada17df0d7a46b9"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:24894ed7e379a482557adde69b6f5b99f6983499e8ed146f995c1aa3aa94a1b7"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:76b62b4ad85b6cd786b88d1b0b3a4067c8ebf78c61d745fea2c29ec1f9b20cbf"
         }
     ]
 }
