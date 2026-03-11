@@ -88,11 +88,11 @@
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:57c24191b56ce6e2a29320861829600a2a52d6dcab48bb81209311af203c4579"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73efdf4a84ebfbe56fa7eaf71df7d3ca1e33381d8ff2908f30ac65a3333d1f4e"
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:8f592bf092d51a13d296f7b230ad64944bc95aafe9d02a4e992c239d2d9b1c73"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:ead8dd878be17cd0ff06f9b914da1511c05453ef09613ec129e7d2a820d8a243"
         }
     ]
 }
