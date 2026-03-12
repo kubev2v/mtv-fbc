@@ -6681,7 +6681,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.10.6",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:363300946fa8925493fcae3aae096ce2e455f4a5cc50d2cfb4dd56936511c9bd",
+    "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:363300946fa8925493fcae3aae096ce2e455f4a5cc50d2cfb4dd56936511c9bd",
     "properties": [
         {
             "type": "olm.gvk",
@@ -7752,6 +7752,10 @@
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:93622bd96029af4e4430ee47589357623f445b11317116c99a70a6b2c611447f"
         },
         {
+            "name": "",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:363300946fa8925493fcae3aae096ce2e455f4a5cc50d2cfb4dd56936511c9bd"
+        },
+        {
             "name": "ova_provider_server",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:d49015d862fda56ee9e16880ac05c2c172145e557b0f1794190912ad1686a94e"
         },
@@ -7786,10 +7790,6 @@
         {
             "name": "vsphere_xcopy_volume_populator",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-xcopy-volume-populator-rhel9@sha256:b6454a6f27c531e84e5c2307f8d8e0a37d089458f03dcb98c290c91b858fd031"
-        },
-        {
-            "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:363300946fa8925493fcae3aae096ce2e455f4a5cc50d2cfb4dd56936511c9bd"
         }
     ]
 }
