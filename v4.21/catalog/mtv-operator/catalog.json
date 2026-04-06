@@ -4605,7 +4605,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:3eb8ba7f44dd0cf6691eccfbfa2b5100776dcca1dc0d977b424f678ed35264a1",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:099d643f8f68fe55de1012e25af6f9d8e52edb26c31169631ad65cf3b8d57f17",
     "properties": [
         {
             "type": "olm.gvk",
@@ -4726,8 +4726,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:205fc87561f715ee83af6fd8f69d9b53167bbbd5de2925d18124e468fbed2226",
-                    "createdAt": "2026-04-02T13:43:49Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:1f94cafb2218f40b38bf733856c173af351503c8d4cdd046fcf2aefeec95bf5a",
+                    "createdAt": "2026-04-06T07:38:54Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5755,7 +5755,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:205fc87561f715ee83af6fd8f69d9b53167bbbd5de2925d18124e468fbed2226"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:1f94cafb2218f40b38bf733856c173af351503c8d4cdd046fcf2aefeec95bf5a"
         },
         {
             "name": "rhv_populator",
@@ -5779,7 +5779,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:3eb8ba7f44dd0cf6691eccfbfa2b5100776dcca1dc0d977b424f678ed35264a1"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:099d643f8f68fe55de1012e25af6f9d8e52edb26c31169631ad65cf3b8d57f17"
         }
     ]
 }
