@@ -11219,7 +11219,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:2d1bcd9df7dce64f07d2480a48b84a5cbd03d4b123c29e7cca4d73a4b8143b9a",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:74c6efcebcad9368b2c0f98302d37d9e88483a90011304e9a213d4b3ac7494b3",
     "properties": [
         {
             "type": "olm.gvk",
@@ -11340,8 +11340,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:72c86e9c0b82c35272c551301a256220520997492c582343f93d54e2a0d82277",
-                    "createdAt": "2026-04-09T13:41:58Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a60f458b75dec85ff1464df0a22f839dad32ab00f599c840a16c03dcefc3ecc",
+                    "createdAt": "2026-04-13T19:05:40Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -11356,7 +11356,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
                     "operatorframework.io/suggested-namespace": "openshift-mtv",
-                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:13f3d971a9a68d053237fd7be95a0fac03efe50c508255bc075c670a81c64732",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:8cd5703df6d6abfe6fc41c94de4b115532041ac0d2d17da950f7053bcaf40625",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
                     "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
@@ -11422,6 +11422,15 @@
                                     "path": "feature_vmware_system_serial_number",
                                     "displayName": "Use VMware System Serial Numbers",
                                     "description": "Use VMware system serial numbers (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_vsphere_vmware_driver_removal",
+                                    "displayName": "Enable VMware Driver Removal On Windows vSphere Conversion",
+                                    "description": "Run VMware driver removal scripts during Windows vSphere conversion (default false)",
                                     "x-descriptors": [
                                         "urn:alm:descriptor:com.tectonic.ui:radio:true",
                                         "urn:alm:descriptor:com.tectonic.ui:radio:false"
@@ -11839,6 +11848,14 @@
                                     ]
                                 },
                                 {
+                                    "path": "controller_blocker_grace_period_minutes",
+                                    "displayName": "Blocker Grace Period",
+                                    "description": "How long Critical/Error blocker conditions must persist before failing an active migration, in minutes (default 5)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
                                     "path": "controller_max_concurrent_reconciles",
                                     "displayName": "Max Concurrent Reconciles",
                                     "description": "Max concurrent reconciles (default 10)",
@@ -12087,6 +12104,62 @@
                                     ]
                                 },
                                 {
+                                    "path": "hyperv_container_limits_cpu",
+                                    "displayName": "HyperV CPU Limit",
+                                    "description": "HyperV CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_limits_memory",
+                                    "displayName": "HyperV Memory Limit",
+                                    "description": "HyperV memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_requests_cpu",
+                                    "displayName": "HyperV CPU Request",
+                                    "description": "HyperV CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_requests_memory",
+                                    "displayName": "HyperV Memory Request",
+                                    "description": "HyperV memory request (default 512Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_provider_server_fqin",
+                                    "displayName": "HyperV Provider Server Image",
+                                    "description": "HyperV provider server image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_hyperv_refresh_interval",
+                                    "displayName": "HyperV Refresh Interval",
+                                    "description": "HyperV inventory refresh interval (default 10s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_hyperv_validation_timeout",
+                                    "displayName": "HyperV Validation Timeout",
+                                    "description": "Timeout for HyperV SMB disk validation (default 30s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
                                     "path": "ova_proxy_container_limits_cpu",
                                     "displayName": "OVA Proxy CPU Limit",
                                     "description": "OVA Proxy CPU limit (default 1000m)",
@@ -12328,28 +12401,28 @@
     ],
     "relatedImages": [
         {
-            "name": "hyperv_provider_server",
-            "image": ""
-        },
-        {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:38fb1ce80cbaeaf64acaa43e088f2d8bade2fa2484fe47eb4f5c7cf57528f025"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:d712b7bac019360b2d44a94d18a94906f6bd21e37cefc5324c962ea2c3d2060e"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:6be078d8a9c0b123bc2085e5d89f218e6662f5999197a3d00291a87a7aaf2e0e"
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:10b89ff0ec86c166aed3546b90bb83f58aa79ea8ce43bcab8a3f6813a35a29ff"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:ade44d9e82b9109a11c8fcfbc03fd8353ec1f9a715a984db3b4177215a62b709"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:c99a8f44615a720e7afca7f15c15fce1a2a0853afd59875ad1bcb1fa9d285b8f"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:cc9cb17b4c747bc243657c5d99ac958cd6412f32a89700764c6426741072aff0"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:8c1e3b690a2d569e7742145edd105a50ed5b35b02357197a5eda5c15440af553"
+        },
+        {
+            "name": "hyperv_provider_server",
+            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:df44ac14790109d38f353cbf9c7d03aedba5467e221be861e6c6a7cd4fea9fc2"
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:13f3d971a9a68d053237fd7be95a0fac03efe50c508255bc075c670a81c64732"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:8cd5703df6d6abfe6fc41c94de4b115532041ac0d2d17da950f7053bcaf40625"
         },
         {
             "name": "openstack_populator",
@@ -12369,7 +12442,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:72c86e9c0b82c35272c551301a256220520997492c582343f93d54e2a0d82277"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a60f458b75dec85ff1464df0a22f839dad32ab00f599c840a16c03dcefc3ecc"
         },
         {
             "name": "rhv_populator",
@@ -12377,7 +12450,7 @@
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:96210c8a85956c7e1db466a53483db39302725d7c325d8eecb7925c0fbafe23c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:a219fc8458e80de2ac444a827780fdb81796c95c27ed67c8a46ebc825b160694"
         },
         {
             "name": "virt_v2v",
@@ -12385,15 +12458,15 @@
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:9712082971ab9e4428662af7d9e543351bf24940ddc9a72f4257f9b2cc7db35b"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:0d2c2c4be94bcfd239991d8853531fa5cd72bf46b55c04fe8a65fe13779d1012"
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:8f7736278268c65cf2f7f0d9f61f6595fd663ad34ef3d3667830dea11026fc97"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:38258970a282fd5d5bede5dd9eea8caa651f2ad5a7c6bc0b6e0df4e7f846e97e"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:2d1bcd9df7dce64f07d2480a48b84a5cbd03d4b123c29e7cca4d73a4b8143b9a"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:74c6efcebcad9368b2c0f98302d37d9e88483a90011304e9a213d4b3ac7494b3"
         }
     ]
 }
