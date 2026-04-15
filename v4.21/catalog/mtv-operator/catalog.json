@@ -4605,7 +4605,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:74c6efcebcad9368b2c0f98302d37d9e88483a90011304e9a213d4b3ac7494b3",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:89127697688b57272d379d174bcb1aefdbbe379903f8fd69376a70f7ef99ba9f",
     "properties": [
         {
             "type": "olm.gvk",
@@ -4726,8 +4726,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a60f458b75dec85ff1464df0a22f839dad32ab00f599c840a16c03dcefc3ecc",
-                    "createdAt": "2026-04-13T19:05:40Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:1eabe41ccb62dcfcef7fe23719d0a92d8a2f119b09c17acf5409982c2ea1c749",
+                    "createdAt": "2026-04-14T22:17:42Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5788,7 +5788,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:d712b7bac019360b2d44a94d18a94906f6bd21e37cefc5324c962ea2c3d2060e"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:cf2d3bace3da5ea76d07e19d5809e2d887ea57f660a89d1f85b234268f741564"
         },
         {
             "name": "cli_download",
@@ -5796,11 +5796,11 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:c99a8f44615a720e7afca7f15c15fce1a2a0853afd59875ad1bcb1fa9d285b8f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:60b0875f6c4b6cd0da7e27a24c52868eaec4c440f603fa249b67164cce781479"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:8c1e3b690a2d569e7742145edd105a50ed5b35b02357197a5eda5c15440af553"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:314cab5b65b264e55b56a47ea5a0b750ba2663109c82c9705fb9cf3e95893f08"
         },
         {
             "name": "hyperv_provider_server",
@@ -5828,7 +5828,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:6a60f458b75dec85ff1464df0a22f839dad32ab00f599c840a16c03dcefc3ecc"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:1eabe41ccb62dcfcef7fe23719d0a92d8a2f119b09c17acf5409982c2ea1c749"
         },
         {
             "name": "rhv_populator",
@@ -5836,11 +5836,11 @@
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:a219fc8458e80de2ac444a827780fdb81796c95c27ed67c8a46ebc825b160694"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:d0cc2fb299ecba88ebf9a8ea3f452318b330969fdcf9a02f8e42dd6781211038"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:1754b8dc6d7890281203408e5ebc03512ae8cf0782b86cd685ea2e0549336b6e"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:dfaed75a4264ca032f725af1b18469a6e3e62ccf15dcca74793acc528dd067a2"
         },
         {
             "name": "virt_v2v_rhel9",
@@ -5852,7 +5852,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:74c6efcebcad9368b2c0f98302d37d9e88483a90011304e9a213d4b3ac7494b3"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:89127697688b57272d379d174bcb1aefdbbe379903f8fd69376a70f7ef99ba9f"
         }
     ]
 }
