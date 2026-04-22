@@ -5772,7 +5772,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:93c2c8383251235bab66f90093278fde8ad99bdf12c6d71d9553d2e24612dd93",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:c199b18952da67a4dbe5fb20e7493200d44b6f0fb55162e1bdd7983d1b1e2895",
     "properties": [
         {
             "type": "olm.gvk",
@@ -5894,7 +5894,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:9a9963f900ebd3295c62b87e21ad73b1b7a39b9cfd4448c92af5d0c54dfa3c92",
-                    "createdAt": "2026-04-20T02:45:40Z",
+                    "createdAt": "2026-04-21T09:13:02Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5909,7 +5909,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
                     "operatorframework.io/suggested-namespace": "openshift-mtv",
-                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:baa7040a09350af350c1fc90ee6fc56bc96ef9a1325f968956085f5edff42eec",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:910ab5a7565a32144d2602aa0c4fa6b7bb9bdbd9c4f0fda524502d28ace4e70b",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
                     "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
@@ -6975,7 +6975,7 @@
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:baa7040a09350af350c1fc90ee6fc56bc96ef9a1325f968956085f5edff42eec"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:910ab5a7565a32144d2602aa0c4fa6b7bb9bdbd9c4f0fda524502d28ace4e70b"
         },
         {
             "name": "openstack_populator",
@@ -7015,11 +7015,11 @@
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:36505ccb28c600c452ed23dbc2418d782116f81eacc631994e912d8e4bfe66b8"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:a1f8308e6fa235654a4d35fe9c40e4657777814968879bde3f6c3713d6728150"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:93c2c8383251235bab66f90093278fde8ad99bdf12c6d71d9553d2e24612dd93"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:c199b18952da67a4dbe5fb20e7493200d44b6f0fb55162e1bdd7983d1b1e2895"
         }
     ]
 }
