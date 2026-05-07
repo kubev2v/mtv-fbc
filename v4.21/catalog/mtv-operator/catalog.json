@@ -6939,7 +6939,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:4ae6bc94241ea2505c2441149b42638dd5e725206911c7e7415b8ce2bb7a5b94",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:055d8fd41e4489016d4b01e91de96658ae1b9b9be257cba23e55db00bf8a7314",
     "properties": [
         {
             "type": "olm.gvk",
@@ -7060,8 +7060,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:a80ff2bd6846d77f4b3b1dd4bf0fb7559a296eb3eb531f1606e68212da8b5718",
-                    "createdAt": "2026-05-04T15:37:22Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:70dc7a3fe95b6aabce7228240765f916370a38a4286dfc65b4be3909d4071a04",
+                    "createdAt": "2026-05-06T22:50:40Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -7157,6 +7157,14 @@
                                     ]
                                 },
                                 {
+                                    "path": "feature_use_conversion_cr",
+                                    "displayName": "Enable Conversion CR",
+                                    "description": "Delegate VM conversion to Conversion CRs instead of managing it directly (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
                                     "path": "feature_auth_required",
                                     "displayName": "Require Authentication",
                                     "description": "Require authentication (default true)",
@@ -7169,6 +7177,33 @@
                                     "path": "feature_cli_download",
                                     "displayName": "Enable CLI Download Service",
                                     "description": "Enable CLI download service (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_mcp_server",
+                                    "displayName": "Enable MCP Server",
+                                    "description": "Enable MCP server (requires OpenShift with Lightspeed) (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "mcp_server_lightspeed_integration",
+                                    "displayName": "MCP Lightspeed Integration",
+                                    "description": "Register MCP server with OpenShift Lightspeed (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "mcp_server_lightspeed_set_mcp_gate",
+                                    "displayName": "MCP Lightspeed Set MCP Gate",
+                                    "description": "Add MCPServer to OLSConfig featureGates when registering with Lightspeed (default false)",
                                     "x-descriptors": [
                                         "urn:alm:descriptor:com.tectonic.ui:radio:true",
                                         "urn:alm:descriptor:com.tectonic.ui:radio:false"
@@ -7203,6 +7238,14 @@
                                     "path": "virt_v2v_image_xfs_fqin",
                                     "displayName": "Virt-v2v XFS Image",
                                     "description": "Virt-v2v XFS conversion image used by migration pods",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "deep_inspection_image_fqin",
+                                    "displayName": "Deep Inspection Image",
+                                    "description": "Deep inspection image used by deep-inspection pods",
                                     "x-descriptors": [
                                         "urn:alm:descriptor:com.tectonic.ui:hidden"
                                     ]
@@ -8122,19 +8165,19 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:95d007a1ca872e85f7f9b59722f95fd787f372c559acdb412d590112ab86546f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:3539913ad1a245df02305fb37c8637a5f022b2b73dfbe1781f635b138bddaedb"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:10b89ff0ec86c166aed3546b90bb83f58aa79ea8ce43bcab8a3f6813a35a29ff"
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:299331ccf9adcd3493fcfaccec60c2f3ed6a255729129180174aea450ade9cd6"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:51cfeb9374d5d2d5dca6d7e4a613bc76373cd5c5c4844d618a88767a83c3ad66"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:29be883a144c0b137539a39133f155068a14466f4e5a5845f1d093009d53512c"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:867b9a1a6767f7da57be8b87b2778d25ff24d79c5743c7d9dc30415824843ad9"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:d310c0e46b593a8de421654f4908afde2ab6f79f753322ece288f34b85f89f12"
         },
         {
             "name": "hyperv_provider_server",
@@ -8162,7 +8205,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:a80ff2bd6846d77f4b3b1dd4bf0fb7559a296eb3eb531f1606e68212da8b5718"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:70dc7a3fe95b6aabce7228240765f916370a38a4286dfc65b4be3909d4071a04"
         },
         {
             "name": "rhv_populator",
@@ -8178,7 +8221,7 @@
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:63e410d819ced8e738e9a885843c731f89e3491e6c51bd07ea8c3c82d4fb77fa"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:944daa9a991717b82a5f83256683389ff9e75e8ff4cf15f2e2d8fd006d065f22"
         },
         {
             "name": "vsphere_copy_offload_populator",
@@ -8186,7 +8229,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:4ae6bc94241ea2505c2441149b42638dd5e725206911c7e7415b8ce2bb7a5b94"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:055d8fd41e4489016d4b01e91de96658ae1b9b9be257cba23e55db00bf8a7314"
         }
     ]
 }
