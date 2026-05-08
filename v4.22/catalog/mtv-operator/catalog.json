@@ -44,8 +44,16 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:055d8fd41e4489016d4b01e91de96658ae1b9b9be257cba23e55db00bf8a7314",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:0a04f15c8a6c1aa2f62bac8026aa6ca035593b440eefd290e21f1c3ac0b9ac30",
     "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Conversion",
+                "version": "v1beta1"
+            }
+        },
         {
             "type": "olm.gvk",
             "value": {
@@ -165,8 +173,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:70dc7a3fe95b6aabce7228240765f916370a38a4286dfc65b4be3909d4071a04",
-                    "createdAt": "2026-05-06T22:50:40Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:3cc609f3b78d591f90d048b4d7fc09b2dff7c2b2c502301fd9bcc3a28c18473e",
+                    "createdAt": "2026-05-08T06:08:52Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -191,6 +199,13 @@
                 "apiServiceDefinitions": {},
                 "crdDescriptions": {
                     "owned": [
+                        {
+                            "name": "conversions.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Conversion",
+                            "displayName": "Conversion",
+                            "description": "VM conversion and inspection lifecycle manager"
+                        },
                         {
                             "name": "forkliftcontrollers.forklift.konveyor.io",
                             "version": "v1beta1",
@@ -1270,7 +1285,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:3539913ad1a245df02305fb37c8637a5f022b2b73dfbe1781f635b138bddaedb"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:8c1d83334c832955124110516e39c047025ad9cef05dfef6f3df6b5e2bd121de"
         },
         {
             "name": "cli_download",
@@ -1282,7 +1297,11 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:d310c0e46b593a8de421654f4908afde2ab6f79f753322ece288f34b85f89f12"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:a31eec845872d5f8bd69b9b1dd45edf187bd04edba2b7b3ebc53eaa9672f23b8"
+        },
+        {
+            "name": "deep-inspection",
+            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel10@sha256:fcdc4e2b5b89991065d6629ba98ed019d963693794effada78c2b9c08bea31ed"
         },
         {
             "name": "hyperv_provider_server",
@@ -1310,7 +1329,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:70dc7a3fe95b6aabce7228240765f916370a38a4286dfc65b4be3909d4071a04"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:3cc609f3b78d591f90d048b4d7fc09b2dff7c2b2c502301fd9bcc3a28c18473e"
         },
         {
             "name": "rhv_populator",
@@ -1330,11 +1349,11 @@
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:959a048581e87683fc46743399277e3b1068de95b54b295cd51a626421b48716"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:c988b8a2ffb95ecc41193330f4de7ff468c173c9c6f7af1bfaa66d4df025d664"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:055d8fd41e4489016d4b01e91de96658ae1b9b9be257cba23e55db00bf8a7314"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:0a04f15c8a6c1aa2f62bac8026aa6ca035593b440eefd290e21f1c3ac0b9ac30"
         }
     ]
 }
