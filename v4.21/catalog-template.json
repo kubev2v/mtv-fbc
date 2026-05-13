@@ -1,98 +1,113 @@
 {
-    "schema": "olm.template.basic",
-    "entries": [
+  "schema": "olm.template.basic",
+  "entries": [
+    {
+      "defaultChannel": "release-v2.11",
+      "icon": {
+        "base64data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgdmlld0JveD0iMCAwIDM4IDM4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojZTAwO308L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNMjgsMi4yNUE3Ljc1ODcsNy43NTg3LDAsMCwxLDM1Ljc1LDEwVjI4QTcuNzU4Nyw3Ljc1ODcsMCwwLDEsMjgsMzUuNzVIMTBBNy43NTg3LDcuNzU4NywwLDAsMSwyLjI1LDI4VjEwQTcuNzU4Nyw3Ljc1ODcsMCwwLDEsMTAsMi4yNUgyOE0yOCwxSDEwYTksOSwwLDAsMC05LDlWMjhhOSw5LDAsMCwwLDksOUgyOGE5LDksMCwwLDAsOS05VjEwYTksOSwwLDAsMC05LTlaIi8+PHBhdGggZD0iTTI3LDE1LjkxMzFIMTYuODE3OGwuNzc4OS0uNzc4M2EuNjI1Ni42MjU2LDAsMSwwLS44ODQ4LS44ODQ4bC0xLjg0NjcsMS44NDY3YS42MjU5LjYyNTksMCwwLDAsLjAwMS44ODQ3bDEuODQ2NywxLjg0NTdhLjYyNDkuNjI0OSwwLDEsMCwuODgyOC0uODg0N2wtLjc4LS43NzkzSDI2LjM3NVYyNi4zNzVIMTcuMTYzMVYyNC44OWEuNjI1LjYyNSwwLDAsMC0xLjI1LDBWMjdhLjYyNTYuNjI1NiwwLDAsMCwuNjI1LjYyNUgyN0EuNjI1Ni42MjU2LDAsMCwwLDI3LjYyNSwyN1YxNi41MzgxQS42MjU2LjYyNTYsMCwwLDAsMjcsMTUuOTEzMVoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIzLjEzMzgsMjEuMDE4NmwtMS44NDY3LTEuODQ1N2EuNjI0OS42MjQ5LDAsMSwwLS44ODI4Ljg4NDdsLjc4Ljc3OTNIMTEuNjI1VjExLjYyNWg5LjIxMTlWMTMuMTFhLjYyNS42MjUsMCwwLDAsMS4yNSwwVjExYS42MjU2LjYyNTYsMCwwLDAtLjYyNS0uNjI1SDExYS42MjU2LjYyNTYsMCwwLDAtLjYyNS42MjVWMjEuNDYxOWEuNjI1Ni42MjU2LDAsMCwwLC42MjUuNjI1SDIxLjE4MjJsLS43Nzg5Ljc3ODNhLjYyNTYuNjI1NiwwLDAsMCwuODg0OC44ODQ4bDEuODQ2Ny0xLjg0NjdhLjYyNTkuNjI1OSwwLDAsMC0uMDAxLS44ODQ3WiIvPjwvc3ZnPg==",
+        "mediatype": "image/svg+xml"
+      },
+      "name": "mtv-operator",
+      "schema": "olm.package"
+    },
+    {
+      "entries": [
         {
-            "defaultChannel": "release-v2.11",
-            "icon": {
-                "base64data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgdmlld0JveD0iMCAwIDM4IDM4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojZTAwO308L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNMjgsMi4yNUE3Ljc1ODcsNy43NTg3LDAsMCwxLDM1Ljc1LDEwVjI4QTcuNzU4Nyw3Ljc1ODcsMCwwLDEsMjgsMzUuNzVIMTBBNy43NTg3LDcuNzU4NywwLDAsMSwyLjI1LDI4VjEwQTcuNzU4Nyw3Ljc1ODcsMCwwLDEsMTAsMi4yNUgyOE0yOCwxSDEwYTksOSwwLDAsMC05LDlWMjhhOSw5LDAsMCwwLDksOUgyOGE5LDksMCwwLDAsOS05VjEwYTksOSwwLDAsMC05LTlaIi8+PHBhdGggZD0iTTI3LDE1LjkxMzFIMTYuODE3OGwuNzc4OS0uNzc4M2EuNjI1Ni42MjU2LDAsMSwwLS44ODQ4LS44ODQ4bC0xLjg0NjcsMS44NDY3YS42MjU5LjYyNTksMCwwLDAsLjAwMS44ODQ3bDEuODQ2NywxLjg0NTdhLjYyNDkuNjI0OSwwLDEsMCwuODgyOC0uODg0N2wtLjc4LS43NzkzSDI2LjM3NVYyNi4zNzVIMTcuMTYzMVYyNC44OWEuNjI1LjYyNSwwLDAsMC0xLjI1LDBWMjdhLjYyNTYuNjI1NiwwLDAsMCwuNjI1LjYyNUgyN0EuNjI1Ni42MjU2LDAsMCwwLDI3LjYyNSwyN1YxNi41MzgxQS42MjU2LjYyNTYsMCwwLDAsMjcsMTUuOTEzMVoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIzLjEzMzgsMjEuMDE4NmwtMS44NDY3LTEuODQ1N2EuNjI0OS42MjQ5LDAsMSwwLS44ODI4Ljg4NDdsLjc4Ljc3OTNIMTEuNjI1VjExLjYyNWg5LjIxMTlWMTMuMTFhLjYyNS42MjUsMCwwLDAsMS4yNSwwVjExYS42MjU2LjYyNTYsMCwwLDAtLjYyNS0uNjI1SDExYS42MjU2LjYyNTYsMCwwLDAtLjYyNS42MjVWMjEuNDYxOWEuNjI1Ni42MjU2LDAsMCwwLC42MjUuNjI1SDIxLjE4MjJsLS43Nzg5Ljc3ODNhLjYyNTYuNjI1NiwwLDAsMCwuODg0OC44ODQ4bDEuODQ2Ny0xLjg0NjdhLjYyNTkuNjI1OSwwLDAsMC0uMDAxLS44ODQ3WiIvPjwvc3ZnPg==",
-                "mediatype": "image/svg+xml"
-            },
-            "name": "mtv-operator",
-            "schema": "olm.package"
-        },
-        {
-            "entries": [
-                {
-                    "name": "mtv-operator.v2.10.5",
-                    "skipRange": ">=0.0.0 <2.10.5"
-                }
-            ],
-            "name": "release-v2.10",
-            "package": "mtv-operator",
-            "schema": "olm.channel"
-        },
-        {
-            "entries": [
-                {
-                    "name": "mtv-operator.v2.11.0",
-                    "skipRange": ">=0.0.0 <2.11.0"
-                },
-                {
-                    "name": "mtv-operator.v2.11.1",
-                    "replaces": "mtv-operator.v2.11.0",
-                    "skipRange": ">=0.0.0 <2.11.1"
-                },
-                {
-                    "name": "mtv-operator.v2.11.2",
-                    "replaces": "mtv-operator.v2.11.1",
-                    "skipRange": ">=0.0.0 <2.11.2"
-                },
-                {
-                    "name": "mtv-operator.v2.11.3",
-                    "replaces": "mtv-operator.v2.11.2",
-                    "skipRange": ">=0.0.0 <2.11.3"
-                },
-                {
-                    "name": "mtv-operator.v2.11.4",
-                    "replaces": "mtv-operator.v2.11.3",
-                    "skipRange": ">=0.0.0 <2.11.4"
-                },
-                {
-                    "name": "mtv-operator.v2.11.5",
-                    "replaces": "mtv-operator.v2.11.4",
-                    "skipRange": ">=0.0.0 <2.11.5"
-                },
-                {
-                    "name": "mtv-operator.v2.11.6",
-                    "replaces": "mtv-operator.v2.11.5",
-                    "skipRange": ">=0.0.0 <2.11.6"
-                }
-            ],
-            "name": "release-v2.11",
-            "package": "mtv-operator",
-            "schema": "olm.channel"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:691816cf2735796cb96e8bcd8dec073df90f405bad5c3119582967ca2bd12b66"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73efdf4a84ebfbe56fa7eaf71df7d3ca1e33381d8ff2908f30ac65a3333d1f4e"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:92f63dae355963413e3e6fb63b6cd33019507105eb554469a644106fb15d096a"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:1695ad5db4aa645fee271de6e3eae46e434eb9e2206f7cb04baf8473f15f74e6"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:cd5aa60542b80aacce20cbe4d7942a3f0dd5fb972acf56c08499eec0e728b998"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:e341e04e662e0f4e86236c786d0bd5893bcb69b648b6ec0ab52c6c229a460e3c"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:9c3441cacddc599c3c419021054f94b7ae10a3a0b2bc474b94697f4ea0271159"
-        },
-        {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:ea330166c21d45dbe7ba716a8e8610d115bca8bd0f9053f1e933f7f1bb4aeb4c"
+          "name": "mtv-operator.v2.10.5",
+          "skipRange": ">=0.0.0 <2.10.5"
         }
-    ]
+      ],
+      "name": "release-v2.10",
+      "package": "mtv-operator",
+      "schema": "olm.channel"
+    },
+    {
+      "entries": [
+        {
+          "name": "mtv-operator.v2.12.0",
+          "skipRange": ">=0.0.0 <2.12.0"
+        }
+      ],
+      "name": "dev-preview",
+      "package": "mtv-operator",
+      "schema": "olm.channel"
+    },
+    {
+      "entries": [
+        {
+          "name": "mtv-operator.v2.11.0",
+          "skipRange": ">=0.0.0 <2.11.0"
+        },
+        {
+          "name": "mtv-operator.v2.11.1",
+          "replaces": "mtv-operator.v2.11.0",
+          "skipRange": ">=0.0.0 <2.11.1"
+        },
+        {
+          "name": "mtv-operator.v2.11.2",
+          "replaces": "mtv-operator.v2.11.1",
+          "skipRange": ">=0.0.0 <2.11.2"
+        },
+        {
+          "name": "mtv-operator.v2.11.3",
+          "replaces": "mtv-operator.v2.11.2",
+          "skipRange": ">=0.0.0 <2.11.3"
+        },
+        {
+          "name": "mtv-operator.v2.11.4",
+          "replaces": "mtv-operator.v2.11.3",
+          "skipRange": ">=0.0.0 <2.11.4"
+        },
+        {
+          "name": "mtv-operator.v2.11.5",
+          "replaces": "mtv-operator.v2.11.4",
+          "skipRange": ">=0.0.0 <2.11.5"
+        },
+        {
+          "name": "mtv-operator.v2.11.6",
+          "replaces": "mtv-operator.v2.11.5",
+          "skipRange": ">=0.0.0 <2.11.6"
+        }
+      ],
+      "name": "release-v2.11",
+      "package": "mtv-operator",
+      "schema": "olm.channel"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:691816cf2735796cb96e8bcd8dec073df90f405bad5c3119582967ca2bd12b66"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73efdf4a84ebfbe56fa7eaf71df7d3ca1e33381d8ff2908f30ac65a3333d1f4e"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:92f63dae355963413e3e6fb63b6cd33019507105eb554469a644106fb15d096a"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:1695ad5db4aa645fee271de6e3eae46e434eb9e2206f7cb04baf8473f15f74e6"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:cd5aa60542b80aacce20cbe4d7942a3f0dd5fb972acf56c08499eec0e728b998"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:e341e04e662e0f4e86236c786d0bd5893bcb69b648b6ec0ab52c6c229a460e3c"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:9c3441cacddc599c3c419021054f94b7ae10a3a0b2bc474b94697f4ea0271159"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:ea330166c21d45dbe7ba716a8e8610d115bca8bd0f9053f1e933f7f1bb4aeb4c"
+    },
+    {
+      "schema": "olm.bundle",
+      "image": "quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview:on-pr-15478f523a9cd8d091ecec0bd6cb87a4bdfd14c1"
+    }
+  ]
 }
