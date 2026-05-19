@@ -155,13 +155,13 @@
                     "skipRange": ">=0.0.0 <2.12.0"
                 }
             ],
-            "name": "dev-preview",
+            "name": "release-v2.12",
             "package": "mtv-operator",
             "schema": "olm.channel"
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:b902f127b63b73e9c04d56ecbe41239fd4a75cc623a1d8224434aedfd9254505"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:cb58f1c519375d65b0c78f0199a197f243299a4e11bd1c3da04d658913ca0f41"
         }
     ]
 }
