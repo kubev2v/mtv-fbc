@@ -44,7 +44,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:bfb1bf1d00514e046b1704fae62459a0d025173383a4ed97764dd08f05352f20",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:64aa26f4fa83b78cdc28a7e87c0ee4c60b68be8c02f721487d9b098a1bc2c939",
     "properties": [
         {
             "type": "olm.gvk",
@@ -173,8 +173,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:88680d8dbc757f042885bbe0d281a6251b3321e7f4ee4b644f58bede71765639",
-                    "createdAt": "2026-05-25T18:48:17Z",
+                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:608fbff9dcb395a9bb08ced6a094774801138d793163be8d5aec627b81c87adf",
+                    "createdAt": "2026-06-02T14:57:12Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -726,6 +726,14 @@
                                     "path": "controller_max_vm_inflight",
                                     "displayName": "Max VM Inflight",
                                     "description": "Max concurrent VM migrations (default 20)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_max_populator_inflight",
+                                    "displayName": "Max Populator Inflight",
+                                    "description": "Max concurrent populator pods per ESXi host (default 20)",
                                     "x-descriptors": [
                                         "urn:alm:descriptor:com.tectonic.ui:hidden"
                                     ]
@@ -1309,31 +1317,31 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:40159badb13a375d66d1a7821401971f5577f886d1986be5ce5320d46aee8450"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:6f131f7a2a565f4c630872f04f2b9a762c19e76f9c2310fecd0f808ba6a6b139"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-cli-download-rhel9@sha256:87c043311d5c58f0941da3fc46c47a2a94effba9cb3aa7dd60c0ed1672d3791a"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-cli-download-rhel9@sha256:9807834a8e01f26fdbb0788936c782596710f21a58773ed000ad269a21229c68"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:2821a29aa279b5dfa26118c0d3dbd22d7c465c2ad4a5f0ee568e526214bf8d60"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:a4dcf8837791f18e904b6da52caf1cfd30a10a954c760776a038255f33a7e3b6"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:4b03a6eb4db4417a905752a8c8727b4fbfbca2b47ca548ec1d6aa2b31dd3b9c2"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:0f87986c235fb57383f97b6d08bb543e9b2362997bc16367e887aae0edddeac5"
         },
         {
             "name": "deep-inspection",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel10@sha256:7c46ecd24af68506961aa6e9c5ba95ff04a3c64b1dabb203cce83f5741ab3144"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel10@sha256:72891c572b28126cdc30b3c2c74d1812276ff24ce60c17c25e9c439c62336e58"
         },
         {
             "name": "deep-inspection-rhel9",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel9@sha256:f1eec9521fed19251792376eaf10115b716377616e6f051f4c67c40238719e67"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel9@sha256:ce189fcbf081da2e19d0958dcc710b35c25b9a419b463b204ce836c37ffaeb18"
         },
         {
             "name": "hyperv_provider_server",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-hyperv-provider-server-rhel9@sha256:97536f28ed31ad7cea8567216c5c1c9607dcdb3511d0a638e052365400c04a81"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-hyperv-provider-server-rhel9@sha256:25023f5df6c25a6dca55204c8a5cbc89eac723195a4d9c3fdb0d52c1a8905587"
         },
         {
             "name": "must_gather",
@@ -1341,47 +1349,47 @@
         },
         {
             "name": "openstack_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:3b1305f3d5c5852142cbd4c6337beb5d17b2efec2b8ba9b92eb692adaa847153"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:54ebacda11b1173353d5a6d360f1c71e86d8f9c1128d5a4e3e7005269658e05c"
         },
         {
             "name": "ova_provider_server",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:57a455849f50a6039d1a2644dea2a254dd02f84a463351ebb88b05396fda6fdf"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:ea155efec4fe675b8dccfc9c2da27a0f490936bade942d7481d2410c81dca26b"
         },
         {
             "name": "ova_proxy",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-proxy-rhel9@sha256:6d3782a05de251e911ba62b9ee32c9b146eca93f60d95bfbb28386bc05262f85"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-proxy-rhel9@sha256:c583dfd036f20c450523aee7c702e9e9b5f689cb5c3ec88fe3c7d0e1ddd97055"
         },
         {
             "name": "populator_controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-populator-controller-rhel9@sha256:485412e1ca994b3543b662912c8d885187dc1c4af935be1f8080f26669beeb66"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-populator-controller-rhel9@sha256:ddf30f6945bd27e6c207b177e6fd8d808dc8a08411713e938d914b65cddce505"
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:88680d8dbc757f042885bbe0d281a6251b3321e7f4ee4b644f58bede71765639"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:608fbff9dcb395a9bb08ced6a094774801138d793163be8d5aec627b81c87adf"
         },
         {
             "name": "rhv_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhv-populator-rhel8@sha256:ee647b154265c33024a3c97666571aed3dff57b6543475a3b72f7afd3166fdd9"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhv-populator-rhel8@sha256:a65196492636809b5976d7965d86153b78529dc9adb50da50f03ba053e77d61d"
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-validation-rhel9@sha256:8bf2eabb1064177225200e042cfef34860b4c66d5eaab1a99c8726f51b953585"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-validation-rhel9@sha256:fc793c6d072db5845310fc6c4cd5120e7f18c74b5e5ae4f6ac6b7012d7928d4a"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:3d0d5e737e87018a725e3e2a4edfd7d24987d8e8f5331394646c1a1490893713"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:83df15e74117fbccf1059dfbb0801d21a95cbeeedeac4990e2aecdf91f5d1664"
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:fab164ce1f5e8d3d606663b98c98059f7eabb1cdd0bab09aa0c669c29ffba2e6"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:a5b7849e588ae5d699bca844381adeb1d20a363eb620ed2b132e627e7e894444"
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-copy-offload-populator-rhel9@sha256:8d98e736cc2e6db00bf3da833373c9792e4153851865f748fa66f990ddcd3acf"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-copy-offload-populator-rhel9@sha256:2a2464b77151137c3e81382dbd48400428000d012d75c573c08a3b14f9bbbc98"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:bfb1bf1d00514e046b1704fae62459a0d025173383a4ed97764dd08f05352f20"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:64aa26f4fa83b78cdc28a7e87c0ee4c60b68be8c02f721487d9b098a1bc2c939"
         }
     ]
 }
