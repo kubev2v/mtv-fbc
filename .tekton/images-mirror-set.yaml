@@ -106,6 +106,30 @@ spec:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview
       source: registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle
     - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/vsphere-copy-offload-populator-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/vsphere-copy-offload-populator-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-copy-offload-populator-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/forklift-ova-proxy-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-ova-proxy-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-ova-proxy-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/forklift-cli-download-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-cli-download-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-cli-download-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/deep-inspection-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/deep-inspection-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel10
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/deep-inspection-rhel9-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/deep-inspection-rhel9-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/hyperv-provider-server-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/hyperv-provider-server-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-hyperv-provider-server-rhel9
+    - mirrors:
         - registry.stage.redhat.io/mtv-candidate/mtv-controller-rhel9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-controller-2-9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-controller-2-10
@@ -361,6 +385,30 @@ spec:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/vsphere-xcopy-volume-populator-dev-preview
       source: registry.stage.redhat.io/mtv-candidate/mtv-vsphere-xcopy-volume-populator-rhel9
     - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/vsphere-copy-offload-populator-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/vsphere-copy-offload-populator-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/forklift-ova-proxy-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-ova-proxy-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-ova-proxy-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/forklift-cli-download-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-cli-download-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-cli-download-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/deep-inspection-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/deep-inspection-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-deep-inspection-rhel10
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/deep-inspection-rhel9-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/deep-inspection-rhel9-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-deep-inspection-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/hyperv-provider-server-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/hyperv-provider-server-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9
+    - mirrors:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-2-9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-2-10
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-11/forklift-operator-2-11
@@ -372,4 +420,3 @@ spec:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-11/forklift-operator-bundle-2-11
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/forklift-operator-bundle-dev-preview
       source: registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle
-
