@@ -22,14 +22,15 @@
             "schema": "olm.channel"
         },
         {
-            "schema": "olm.bundle",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:9ed2701a8d94d24c5617cf4b0b6340f45453f8df9cf8a01ed8d5d7e3317b411a"
-        },
-        {
             "entries": [
                 {
                     "name": "mtv-operator.v2.12.0",
                     "skipRange": ">=0.0.0 <2.12.0"
+                },
+                {
+                    "name": "mtv-operator.v2.12.1",
+                    "replaces": "mtv-operator.v2.12.0",
+                    "skipRange": ">=0.0.0 <2.12.1"
                 }
             ],
             "name": "release-v2.12",
@@ -38,7 +39,15 @@
         },
         {
             "schema": "olm.bundle",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:9ed2701a8d94d24c5617cf4b0b6340f45453f8df9cf8a01ed8d5d7e3317b411a"
+        },
+        {
+            "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:86f7907099fdb710a00465d7a7e3518b6b4c4b489f0b242380ad87df0018620f"
+        },
+        {
+            "schema": "olm.bundle",
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:4b7764762d7a52d1a930841426cc6c4d9b41ae9513ceccab45ad9bc7e95e3da5"
         }
     ]
 }
