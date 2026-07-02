@@ -3935,7 +3935,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.2",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:0f6112957eb59a0bde1db0143a97b11544f8b854544dbbf5e9c747dc106abf45",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73081755449dee45859ab9b811a695f0839d565c7a0d887aec4607c1ec518292",
     "properties": [
         {
             "type": "olm.gvk",
@@ -4064,8 +4064,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:1fd618db370fc0b5474b708b1f70ef2345015dc8d6e45166f9ac6d0c318a5ace",
-                    "createdAt": "2026-06-29T10:22:22Z",
+                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:7ea87d6a1bd60d600486321aa99522a23c3b5d85d323340d2ee40ae08ed8f56f",
+                    "createdAt": "2026-07-01T19:29:10Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -5208,7 +5208,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:560ab0abe5c1511e7d6fc15bfa16cb38f2e8ae4afbe7ee6c33fb227ef4b2f9a4"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:3a7ffe88e4fae3fd202d17682812777ff67f0c8568abf1fca68e830879baafe1"
         },
         {
             "name": "cli_download",
@@ -5220,7 +5220,7 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:77cf4432c779342a8db38cd80abfa2ecf48bf7b0cb4a3e02d5a9d96c26d9331a"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:cd78671ed4eedba88ef8f5c0ef5f06c14fb6a17589382985a954388cc329f82d"
         },
         {
             "name": "deep-inspection",
@@ -5256,7 +5256,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:1fd618db370fc0b5474b708b1f70ef2345015dc8d6e45166f9ac6d0c318a5ace"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:7ea87d6a1bd60d600486321aa99522a23c3b5d85d323340d2ee40ae08ed8f56f"
         },
         {
             "name": "rhv_populator",
@@ -5280,7 +5280,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:0f6112957eb59a0bde1db0143a97b11544f8b854544dbbf5e9c747dc106abf45"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73081755449dee45859ab9b811a695f0839d565c7a0d887aec4607c1ec518292"
         }
     ]
 }
