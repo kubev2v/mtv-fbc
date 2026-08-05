@@ -98,6 +98,11 @@
             "name": "mtv-operator.v2.12.3",
             "replaces": "mtv-operator.v2.12.2",
             "skipRange": ">=0.0.0 <2.12.3"
+        },
+        {
+            "name": "mtv-operator.v2.12.4",
+            "replaces": "mtv-operator.v2.12.3",
+            "skipRange": ">=0.0.0 <2.12.4"
         }
     ]
 }
@@ -15900,9 +15905,9 @@
 }
 {
     "schema": "olm.bundle",
-    "name": "mtv-operator.v5.0.0",
+    "name": "mtv-operator.v2.12.4",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:93f22826984881d8606fdca4d4da06fef45c797afd18afdd878971968cdff784",
+    "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:6e1c67ce56345b59556b17a613d56355645cd1a89f6edaebfb373e521575e7be",
     "properties": [
         {
             "type": "olm.gvk",
@@ -16020,7 +16025,7 @@
             "type": "olm.package",
             "value": {
                 "packageName": "mtv-operator",
-                "version": "5.0.0"
+                "version": "2.12.4"
             }
         },
         {
@@ -16031,8 +16036,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:8b1e42611fcc1637a2baaa5bb04b6c3403461dea8fc0f62ffdf492e87f58a34a",
-                    "createdAt": "2026-08-02T09:10:38Z",
+                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:e781993d8c766b7161c201545928b267c91f2c0a42cd73890ed95b7aa6361b2c",
+                    "createdAt": "2026-08-02T09:09:20Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -16047,7 +16052,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
                     "operatorframework.io/suggested-namespace": "openshift-mtv",
-                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:a372418fe138b5ee391637a735c5d50f7d3f980bab641b44ec201732af9b0494",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel8@sha256:9c88a8b2606ae30a045ccd684695a7b757719a019ccedc218115bdfac2554e79",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
                     "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
@@ -17175,19 +17180,1372 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:33e31967b3d68c89007ef4fdcb63b363950a67a3f098d3c32479119318b6a9e5"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:0811aca888d3df8d14ab026512cb3d00956a43f3d93ca4a14a0d3fb583665671"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:e77fb5be7c7aac2aaa0318605b8fec59756ed87364ee8c654f272738c44fceaa"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-cli-download-rhel9@sha256:b25e61329b46cf6008e7b46cf042fcdf4d19ae609e70cd0ae3dfccf8f54f2bf8"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:423f2ca44922a71b8ad5488f24109f09e680c683d2a632845e4725ea382e6b98"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:239ec38286dd5d6d0e8457032ec212648701949b96894abaac4214b972aae68d"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:40d625566ec23158c1bb0fe37e988a09fd67170588a134c0b815025d9521df0b"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:a9eb15c9cc0517b267802f8c5eb8cb6a74526d426e48df4db842b9163815fba8"
+        },
+        {
+            "name": "deep-inspection",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel10@sha256:78b12eddf15bc93c154b9dd88ae82d07576440218b5eadafc891da00adc6bcf9"
+        },
+        {
+            "name": "deep-inspection-rhel9",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-deep-inspection-rhel9@sha256:cf2ab65cc76ec5782eec8de78a64001fd185b04f39b702ca97b397c186b37ea5"
+        },
+        {
+            "name": "hyperv_provider_server",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-hyperv-provider-server-rhel9@sha256:1a4fed91c65c9f8e0098e6ff1046fd4db6987cb40da665806f6e8ad4fa759b5e"
+        },
+        {
+            "name": "must_gather",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel8@sha256:9c88a8b2606ae30a045ccd684695a7b757719a019ccedc218115bdfac2554e79"
+        },
+        {
+            "name": "openstack_populator",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-openstack-populator-rhel9@sha256:dc486c6608e9076ed159235a9123d5475d69d509211e1047c550d10ca067852e"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:6e1c67ce56345b59556b17a613d56355645cd1a89f6edaebfb373e521575e7be"
+        },
+        {
+            "name": "ova_provider_server",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-provider-server-rhel9@sha256:5d656956845a0bd59b3a10b1b2d173ab8c3ae60ebdc5aaa277ccd1b04ed63ee9"
+        },
+        {
+            "name": "ova_proxy",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-ova-proxy-rhel9@sha256:2bcb84b2c21e011bb5159d1c425dfe15c419cf34eec05a409ae664b409181174"
+        },
+        {
+            "name": "populator_controller",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-populator-controller-rhel9@sha256:34e17e17488889c4b97810f52f634c7bacfe91b5200def54573bd1bdd8ac0965"
+        },
+        {
+            "name": "forklift-operator",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:e781993d8c766b7161c201545928b267c91f2c0a42cd73890ed95b7aa6361b2c"
+        },
+        {
+            "name": "rhv_populator",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhv-populator-rhel8@sha256:bea95086695eb8adea72bf1b71f4a949a0e0ae388049a864c57f83ee8a455031"
+        },
+        {
+            "name": "validation",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-validation-rhel9@sha256:99f8e4708ed5bb54935344eb2939da7743bd58b06e2da19fd2dccb5aebc13e9f"
+        },
+        {
+            "name": "virt_v2v",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:7cd1e6160656f99d6249c2d1de2725171b0e87d2a0c63ee64b5c35cf39d9410a"
+        },
+        {
+            "name": "virt_v2v_rhel9",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:992955461741defc99fa82bdca704fb2f9d776ef672ff46b9c4bc486bf7387ad"
+        },
+        {
+            "name": "vsphere_copy_offload_populator",
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-vsphere-copy-offload-populator-rhel9@sha256:c5726e933ca9f30eb09cc91dcf6a1d8f46462f326e86662ed91cfd18dba9be1d"
+        }
+    ]
+}
+{
+    "schema": "olm.bundle",
+    "name": "mtv-operator.v5.0.0",
+    "package": "mtv-operator",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:222c7318e67a6904c389cb5b067e278af2a15cb2f087f7bfc7c48f1d09359a51",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Conversion",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "ForkliftController",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Hook",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Host",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "HyperVProviderServer",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Migration",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "NetworkMap",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "OVAProviderServer",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "OpenstackVolumePopulator",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "OvirtVolumePopulator",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Plan",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "Provider",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "StorageMap",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "forklift.konveyor.io",
+                "kind": "VSphereXcopyVolumePopulator",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "mtv-operator",
+                "version": "5.0.0"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"ForkliftController\",\n    \"metadata\": {\n      \"name\": \"forklift-controller\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"feature_ui_plugin\": \"true\",\n      \"feature_validation\": \"true\",\n      \"feature_volume_populator\": \"true\"\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"Hook\",\n    \"metadata\": {\n      \"name\": \"example-hook\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"image\": \"quay.io/konveyor/hook-runner\",\n      \"playbook\": \"\\u003cbase64-encoded-playbook\\u003e\"\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"Host\",\n    \"metadata\": {\n      \"name\": \"example-host\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"id\": \"\",\n      \"ipAddress\": \"\",\n      \"provider\": {\n        \"name\": \"\",\n        \"namespace\": \"\"\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"Migration\",\n    \"metadata\": {\n      \"name\": \"example-migration\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"plan\": {\n        \"name\": \"example-plan\",\n        \"namespace\": \"openshift-mtv\"\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"NetworkMap\",\n    \"metadata\": {\n      \"name\": \"example-networkmap\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"map\": [\n        {\n          \"destination\": {\n            \"name\": \"\",\n            \"namespace\": \"\",\n            \"type\": \"pod\"\n          },\n          \"source\": {\n            \"id\": \"\"\n          }\n        }\n      ],\n      \"provider\": {\n        \"name\": \"\",\n        \"namespace\": \"\"\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"OpenstackVolumePopulator\",\n    \"metadata\": {\n      \"name\": \"example-openstack\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"identityUrl\": \"\",\n      \"imageId\": \"\",\n      \"secretName\": \"\"\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"OvirtVolumePopulator\",\n    \"metadata\": {\n      \"name\": \"example-ovirt-imageio\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"diskId\": \"\",\n      \"engineSecretName\": \"\",\n      \"engineUrl\": \"\"\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"Plan\",\n    \"metadata\": {\n      \"name\": \"example-plan\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"provider\": {\n        \"destination\": {\n          \"name\": \"\",\n          \"namespace\": \"\"\n        },\n        \"source\": {\n          \"name\": \"\",\n          \"namespace\": \"\"\n        }\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"Provider\",\n    \"metadata\": {\n      \"name\": \"example-provider\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"secret\": {\n        \"name\": \"\",\n        \"namespace\": \"\"\n      },\n      \"type\": \"vmware\",\n      \"url\": \"\"\n    }\n  },\n  {\n    \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n    \"kind\": \"StorageMap\",\n    \"metadata\": {\n      \"name\": \"example-storagemap\",\n      \"namespace\": \"openshift-mtv\"\n    },\n    \"spec\": {\n      \"map\": [\n        {\n          \"destination\": {\n            \"storageClass\": \"\"\n          },\n          \"source\": {\n            \"id\": \"\"\n          }\n        }\n      ],\n      \"provider\": {\n        \"name\": \"\",\n        \"namespace\": \"\"\n      }\n    }\n  }\n]",
+                    "capabilities": "Seamless Upgrades",
+                    "categories": "OpenShift Optional",
+                    "certified": "true",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:c449b55269204e8dcb3558ea56219d10d99ec20c4299482b2741147ebc3e4aad",
+                    "createdAt": "2026-08-04T20:58:04Z",
+                    "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "false",
+                    "features.operators.openshift.io/disconnected": "false",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/fipsmode": "true",
+                    "features.operators.openshift.io/proxy-aware": "false",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
+                    "operatorframework.io/suggested-namespace": "openshift-mtv",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:996b6e94d4d5fe7d0839c05cb9aa028465551b29b7a469ce36f3f3ed05bbfd92",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
+                    "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
+                    "repository": "https://github.com/kubev2v/forklift",
+                    "support": "Red Hat"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "conversions.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Conversion",
+                            "displayName": "Conversion",
+                            "description": "VM conversion and inspection lifecycle manager"
+                        },
+                        {
+                            "name": "forkliftcontrollers.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "ForkliftController",
+                            "displayName": "ForkliftController",
+                            "description": "VM migration controller",
+                            "specDescriptors": [
+                                {
+                                    "path": "feature_ui_plugin",
+                                    "displayName": "Enable UI Plugin",
+                                    "description": "Enable UI plugin (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_validation",
+                                    "displayName": "Enable Validation Service",
+                                    "description": "Enable validation service (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_volume_populator",
+                                    "displayName": "Enable Volume Populators",
+                                    "description": "Enable volume populators (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_copy_offload",
+                                    "displayName": "Enable Copy Offload Plugins",
+                                    "description": "Enable copy offload plugins (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_ocp_live_migration",
+                                    "displayName": "Enable OCP Live Migration",
+                                    "description": "Enable OCP live migration (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_vmware_system_serial_number",
+                                    "displayName": "Use VMware System Serial Numbers",
+                                    "description": "Use VMware system serial numbers (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_vsphere_vmware_driver_removal",
+                                    "displayName": "Enable VMware Driver Removal On Windows vSphere Conversion",
+                                    "description": "Run VMware driver removal scripts during Windows vSphere conversion (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_use_conversion_cr",
+                                    "displayName": "Enable Conversion CR",
+                                    "description": "Delegate VM conversion to Conversion CRs instead of managing it directly (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_auth_required",
+                                    "displayName": "Require Authentication",
+                                    "description": "Require authentication (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_cli_download",
+                                    "displayName": "Enable CLI Download Service",
+                                    "description": "Enable CLI download service (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_mcp_server",
+                                    "displayName": "Enable MCP Server",
+                                    "description": "Enable MCP server (requires OpenShift with Lightspeed) (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "mcp_server_lightspeed_integration",
+                                    "displayName": "MCP Lightspeed Integration",
+                                    "description": "Register MCP server with OpenShift Lightspeed (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "mcp_server_lightspeed_set_mcp_gate",
+                                    "displayName": "MCP Lightspeed Set MCP Gate",
+                                    "description": "Add MCPServer to OLSConfig featureGates when registering with Lightspeed (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_ova_appliance_management",
+                                    "displayName": "Enable OVA Appliance Management",
+                                    "description": "Enable OVA appliance management endpoints (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:true",
+                                        "urn:alm:descriptor:com.tectonic.ui:radio:false"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_image_fqin",
+                                    "displayName": "Controller Image",
+                                    "description": "Controller pod image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_image_fqin",
+                                    "displayName": "Virt-v2v Image",
+                                    "description": "Virt-v2v conversion image used by migration pods",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_image_xfs_fqin",
+                                    "displayName": "Virt-v2v XFS Image",
+                                    "description": "Virt-v2v XFS conversion image used by migration pods",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "deep_inspection_image_fqin",
+                                    "displayName": "Deep Inspection Image",
+                                    "description": "Deep inspection image used by deep-inspection pods",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "deep_inspection_image_xfs_fqin",
+                                    "displayName": "Deep Inspection XFS Image",
+                                    "description": "Deep inspection XFS image used by deep-inspection pods",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "vddk_image",
+                                    "displayName": "VDDK Image",
+                                    "description": "VDDK image for VMware disk access",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "api_image_fqin",
+                                    "displayName": "API Image",
+                                    "description": "API service image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "cli_download_image_fqin",
+                                    "displayName": "CLI Download Image",
+                                    "description": "CLI download service image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ui_plugin_image_fqin",
+                                    "displayName": "UI Plugin Image",
+                                    "description": "UI plugin image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_image_fqin",
+                                    "displayName": "Validation Image",
+                                    "description": "Validation service image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_controller_image_fqin",
+                                    "displayName": "Populator Controller Image",
+                                    "description": "Volume populator controller image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_ovirt_image_fqin",
+                                    "displayName": "oVirt Populator Image",
+                                    "description": "oVirt populator image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_openstack_image_fqin",
+                                    "displayName": "OpenStack Populator Image",
+                                    "description": "OpenStack populator image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_vsphere_copy_offload_image_fqin",
+                                    "displayName": "vSphere Populator Image",
+                                    "description": "vSphere xcopy populator image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_provider_server_fqin",
+                                    "displayName": "OVA Provider Server Image",
+                                    "description": "OVA provider server image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "must_gather_image_fqin",
+                                    "displayName": "Must-gather Image",
+                                    "description": "Must-gather debugging image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_fqin",
+                                    "displayName": "OVA Proxy Image",
+                                    "description": "OVA inventory proxy image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_container_limits_cpu",
+                                    "displayName": "Controller CPU Limit",
+                                    "description": "Controller CPU limit (default 500m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_container_limits_memory",
+                                    "displayName": "Controller Memory Limit",
+                                    "description": "Controller memory limit (default 800Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_container_requests_cpu",
+                                    "displayName": "Controller CPU Request",
+                                    "description": "Controller CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_container_requests_memory",
+                                    "displayName": "Controller Memory Request",
+                                    "description": "Controller memory request (default 350Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "inventory_container_limits_cpu",
+                                    "displayName": "Inventory CPU Limit",
+                                    "description": "Inventory CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "inventory_container_limits_memory",
+                                    "displayName": "Inventory Memory Limit",
+                                    "description": "Inventory memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "inventory_container_requests_cpu",
+                                    "displayName": "Inventory CPU Request",
+                                    "description": "Inventory CPU request (default 500m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "inventory_container_requests_memory",
+                                    "displayName": "Inventory Memory Request",
+                                    "description": "Inventory memory request (default 500Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "inventory_route_timeout",
+                                    "displayName": "Inventory Route Timeout",
+                                    "description": "Inventory route timeout (default 360s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "api_container_limits_cpu",
+                                    "displayName": "API CPU Limit",
+                                    "description": "API service CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "api_container_limits_memory",
+                                    "displayName": "API Memory Limit",
+                                    "description": "API service memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "api_container_requests_cpu",
+                                    "displayName": "API CPU Request",
+                                    "description": "API service CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "api_container_requests_memory",
+                                    "displayName": "API Memory Request",
+                                    "description": "API service memory request (default 150Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "cli_download_container_limits_cpu",
+                                    "displayName": "CLI Download CPU Limit",
+                                    "description": "CLI download service CPU limit (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "cli_download_container_limits_memory",
+                                    "displayName": "CLI Download Memory Limit",
+                                    "description": "CLI download service memory limit (default 128Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "cli_download_container_requests_cpu",
+                                    "displayName": "CLI Download CPU Request",
+                                    "description": "CLI download service CPU request (default 50m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "cli_download_container_requests_memory",
+                                    "displayName": "CLI Download Memory Request",
+                                    "description": "CLI download service memory request (default 64Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ui_plugin_container_limits_cpu",
+                                    "displayName": "UI Plugin CPU Limit",
+                                    "description": "UI plugin CPU limit (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ui_plugin_container_limits_memory",
+                                    "displayName": "UI Plugin Memory Limit",
+                                    "description": "UI plugin memory limit (default 800Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ui_plugin_container_requests_cpu",
+                                    "displayName": "UI Plugin CPU Request",
+                                    "description": "UI plugin CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ui_plugin_container_requests_memory",
+                                    "displayName": "UI Plugin Memory Request",
+                                    "description": "UI plugin memory request (default 150Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_container_limits_cpu",
+                                    "displayName": "Validation CPU Limit",
+                                    "description": "Validation CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_container_limits_memory",
+                                    "displayName": "Validation Memory Limit",
+                                    "description": "Validation memory limit (default 300Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_container_requests_cpu",
+                                    "displayName": "Validation CPU Request",
+                                    "description": "Validation CPU request (default 400m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_container_requests_memory",
+                                    "displayName": "Validation Memory Request",
+                                    "description": "Validation memory request (default 50Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_policy_agent_search_interval",
+                                    "displayName": "Policy Agent Search Interval",
+                                    "description": "Policy agent search interval in seconds (default 120)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_extra_volume_name",
+                                    "displayName": "Validation Extra Volume Name",
+                                    "description": "Volume name for extra validation rules (default validation-extra-rules)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "validation_extra_volume_mountpath",
+                                    "displayName": "Validation Extra Volume Mount Path",
+                                    "description": "Mount path for extra validation rules (default /usr/share/opa/policies/extra)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ovirt_osmap_configmap_name",
+                                    "displayName": "oVirt OS Map ConfigMap Name",
+                                    "description": "ConfigMap name for oVirt OS mappings (default forklift-ovirt-osmap)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "vsphere_osmap_configmap_name",
+                                    "displayName": "vSphere OS Map ConfigMap Name",
+                                    "description": "ConfigMap name for vSphere OS mappings (default forklift-vsphere-osmap)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_customize_configmap_name",
+                                    "displayName": "Virt-Customize ConfigMap Name",
+                                    "description": "ConfigMap name for virt-customize configuration (default forklift-virt-customize)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_max_vm_inflight",
+                                    "displayName": "Max VM Inflight",
+                                    "description": "Max concurrent VM migrations (default 20)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_max_populator_inflight",
+                                    "displayName": "Max Populator Inflight",
+                                    "description": "Max concurrent populator pods per ESXi host (default 20)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_precopy_interval",
+                                    "displayName": "Precopy Interval",
+                                    "description": "Precopy interval in minutes (default 60)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_blocker_grace_period_minutes",
+                                    "displayName": "Blocker Grace Period",
+                                    "description": "How long Critical/Error blocker conditions must persist before failing an active migration, in minutes (default 5)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_max_concurrent_reconciles",
+                                    "displayName": "Max Concurrent Reconciles",
+                                    "description": "Max concurrent reconciles (default 10)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_snapshot_removal_timeout_minuts",
+                                    "displayName": "Snapshot Removal Timeout",
+                                    "description": "Snapshot removal timeout in minutes (default 120)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_snapshot_status_check_rate_seconds",
+                                    "displayName": "Snapshot Status Check Rate",
+                                    "description": "Snapshot status check rate in seconds (default 10)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_cleanup_retries",
+                                    "displayName": "Cleanup Retries",
+                                    "description": "Cleanup retry count (default 10)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_snapshot_removal_check_retries",
+                                    "displayName": "Snapshot Removal Check Retries",
+                                    "description": "Snapshot removal retries (default 20)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_vddk_job_active_deadline_sec",
+                                    "displayName": "VDDK Job Active Deadline",
+                                    "description": "VDDK job timeout in seconds (default 300)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_tls_connection_timeout_sec",
+                                    "displayName": "TLS Connection Timeout",
+                                    "description": "TLS connection timeout seconds (default 5)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_vsphere_incremental_backup",
+                                    "displayName": "vSphere Incremental Backup",
+                                    "description": "Use vSphere incremental backup (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_ovirt_warm_migration",
+                                    "displayName": "oVirt Warm Migration",
+                                    "description": "Enable oVirt warm migration (default true)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_retain_precopy_importer_pods",
+                                    "displayName": "Retain Precopy Importer Pods",
+                                    "description": "Retain precopy pods (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_retain_populator_pods",
+                                    "displayName": "Retain Populator Pods",
+                                    "description": "Retain populator pods after migration for debugging (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "feature_xfs_repair_ignore",
+                                    "displayName": "XFS Repair Ignore",
+                                    "description": "Ignore xfs_repair exit status during conversion (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_static_udn_ip_addresses",
+                                    "displayName": "Static UDN IP Addresses",
+                                    "description": "Enable static udn IP addresses feature (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_filesystem_overhead",
+                                    "displayName": "Filesystem Overhead",
+                                    "description": "Filesystem overhead percentage (default 10)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_block_overhead",
+                                    "displayName": "Block Overhead",
+                                    "description": "Block overhead in bytes (default 0)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_container_limits_cpu",
+                                    "displayName": "Virt-v2v CPU Limit",
+                                    "description": "virt-v2v CPU limit (default 4000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_container_limits_memory",
+                                    "displayName": "Virt-v2v Memory Limit",
+                                    "description": "virt-v2v memory limit (default 8Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_container_requests_cpu",
+                                    "displayName": "Virt-v2v CPU Request",
+                                    "description": "virt-v2v CPU request (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_container_requests_memory",
+                                    "displayName": "Virt-v2v Memory Request",
+                                    "description": "virt-v2v memory request (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_memsize",
+                                    "displayName": "Virt-v2v Memory Size",
+                                    "description": "Memory (in MB) allocated for the virt-v2v conversion appliance",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_smp",
+                                    "displayName": "Virt-v2v SMP",
+                                    "description": "Number of virtual CPUs for the virt-v2v conversion appliance",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_dont_request_kvm",
+                                    "displayName": "Virt-v2v Don't Request KVM",
+                                    "description": "Don't request KVM for virt-v2v",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_extra_args",
+                                    "displayName": "Virt-v2v Extra Args",
+                                    "description": "Additional arguments for virt-v2v conversion",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_inspector_extra_args",
+                                    "displayName": "Virt-v2v Inspector Extra Args",
+                                    "description": "Additional arguments for virt-v2v-inspector",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "virt_v2v_extra_conf_config_map",
+                                    "displayName": "Virt-v2v Extra Config ConfigMap",
+                                    "description": "ConfigMap name containing extra virt-v2v configuration",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hooks_container_limits_cpu",
+                                    "displayName": "Hooks CPU Limit",
+                                    "description": "Hooks CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hooks_container_limits_memory",
+                                    "displayName": "Hooks Memory Limit",
+                                    "description": "Hooks memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hooks_container_requests_cpu",
+                                    "displayName": "Hooks CPU Request",
+                                    "description": "Hooks CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hooks_container_requests_memory",
+                                    "displayName": "Hooks Memory Request",
+                                    "description": "Hooks memory request (default 150Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_container_limits_cpu",
+                                    "displayName": "OVA CPU Limit",
+                                    "description": "OVA CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_container_limits_memory",
+                                    "displayName": "OVA Memory Limit",
+                                    "description": "OVA memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_container_requests_cpu",
+                                    "displayName": "OVA CPU Request",
+                                    "description": "OVA CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_container_requests_memory",
+                                    "displayName": "OVA Memory Request",
+                                    "description": "OVA memory request (default 150Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_limits_cpu",
+                                    "displayName": "HyperV CPU Limit",
+                                    "description": "HyperV CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_limits_memory",
+                                    "displayName": "HyperV Memory Limit",
+                                    "description": "HyperV memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_requests_cpu",
+                                    "displayName": "HyperV CPU Request",
+                                    "description": "HyperV CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_container_requests_memory",
+                                    "displayName": "HyperV Memory Request",
+                                    "description": "HyperV memory request (default 512Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "hyperv_provider_server_fqin",
+                                    "displayName": "HyperV Provider Server Image",
+                                    "description": "HyperV provider server image",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_hyperv_refresh_interval",
+                                    "displayName": "HyperV Refresh Interval",
+                                    "description": "HyperV inventory refresh interval (default 10s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_hyperv_validation_timeout",
+                                    "displayName": "HyperV Validation Timeout",
+                                    "description": "Timeout for HyperV SMB disk validation (default 30s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_container_limits_cpu",
+                                    "displayName": "OVA Proxy CPU Limit",
+                                    "description": "OVA Proxy CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_container_limits_memory",
+                                    "displayName": "OVA Proxy Memory Limit",
+                                    "description": "OVA Proxy memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_container_requests_cpu",
+                                    "displayName": "OVA Proxy CPU Request",
+                                    "description": "OVA Proxy CPU request (default 250m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_container_requests_memory",
+                                    "displayName": "OVA Proxy Memory Request",
+                                    "description": "OVA Proxy memory request (default 512Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "ova_proxy_route_timeout",
+                                    "displayName": "OVA Proxy Route Timeout",
+                                    "description": "OVA Proxy route timeout (default 360s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_limits_cpu",
+                                    "displayName": "Volume Populator CPU Limit",
+                                    "description": "Volume Populator CPU limit (default 1000m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_limits_memory",
+                                    "displayName": "Volume Populator Memory Limit",
+                                    "description": "Volume Populator memory limit (default 1Gi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_requests_cpu",
+                                    "displayName": "Volume Populator CPU Request",
+                                    "description": "Volume Populator CPU request (default 100m)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "populator_container_requests_memory",
+                                    "displayName": "Volume Populator Memory Request",
+                                    "description": "Volume Populator memory request (default 512Mi)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "controller_log_level",
+                                    "displayName": "Controller Log Level",
+                                    "description": "Log verbosity level (default 3)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "image_pull_policy",
+                                    "displayName": "Image Pull Policy",
+                                    "description": "Image pull policy (default Always)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "k8s_cluster",
+                                    "displayName": "K8s Cluster",
+                                    "description": "Whether running on Kubernetes (vs OpenShift) (default false)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                },
+                                {
+                                    "path": "metric_interval",
+                                    "displayName": "Metric Interval",
+                                    "description": "Metrics scrape interval (default 30s)",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:hidden"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hooks.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Hook",
+                            "displayName": "Hook",
+                            "description": "Hook schema for the hooks API"
+                        },
+                        {
+                            "name": "hosts.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Host",
+                            "displayName": "Host",
+                            "description": "VM host"
+                        },
+                        {
+                            "name": "hypervproviderservers.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "HyperVProviderServer"
+                        },
+                        {
+                            "name": "migrations.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Migration",
+                            "displayName": "Migration",
+                            "description": "VM migration"
+                        },
+                        {
+                            "name": "networkmaps.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "NetworkMap",
+                            "displayName": "NetworkMap",
+                            "description": "VM network map"
+                        },
+                        {
+                            "name": "openstackvolumepopulators.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "OpenstackVolumePopulator",
+                            "displayName": "OpenstackVolumePopulator",
+                            "description": "OpenStack Volume Populator"
+                        },
+                        {
+                            "name": "ovaproviderservers.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "OVAProviderServer",
+                            "displayName": "OVAProviderServer",
+                            "description": "OVA Provider Server"
+                        },
+                        {
+                            "name": "ovirtvolumepopulators.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "OvirtVolumePopulator",
+                            "displayName": "OvirtVolumePopulator",
+                            "description": "oVirt Volume Populator"
+                        },
+                        {
+                            "name": "plans.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Plan",
+                            "displayName": "Plan",
+                            "description": "VM migration plan"
+                        },
+                        {
+                            "name": "providers.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "Provider",
+                            "displayName": "Provider",
+                            "description": "VM provider"
+                        },
+                        {
+                            "name": "storagemaps.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "StorageMap",
+                            "displayName": "StorageMap",
+                            "description": "VM storage map"
+                        },
+                        {
+                            "name": "vspherexcopyvolumepopulators.forklift.konveyor.io",
+                            "version": "v1beta1",
+                            "kind": "VSphereXcopyVolumePopulator",
+                            "displayName": "VSphereXcopyVolumePopulator",
+                            "description": "VSphere Xcopy Volume Populator"
+                        }
+                    ]
+                },
+                "description": "The Migration Toolkit for Virtualization Operator manages the deployment and life cycle of Migration Toolkit for Virtualization on [OpenShift](https://www.openshift.com/) Container Platform.\n\n### Installation\n\nOpenShift Virtualization must be installed on an OpenShift migration target cluster before you can use MTV to transfer any VMs to that cluster\n\nOnce you have successfully installed the Operator, proceed to deploy components by creating the required ForkliftController CR.\n\nBy default, the Operator installs the following components on a target cluster:\n\n* Controller, to coordinate migration processes.\n* UI, the web console to manage migrations.\n* Validation, a service to validate migration workflows.\n\n### Compatibility\n\nMigration Toolkit for Virtualization 2.10 is supported on OpenShift 4.18, 4.19 and 4.20\n\nMigration Toolkit for Virtualization 2.11 is supported on OpenShift 4.19, 4.20 and 4.21\n\nMigration Toolkit for Virtualization 2.12 is supported on OpenShift 4.20, 4.21 and 4.22\n\nMore information on compatibility in the [MTV Lifecycle document](https://access.redhat.com/support/policy/updates/migration-toolkit-for-virtualization).\n\n### Documentation\nDocumentation can be found on the [Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/).\n\n### Getting help\nIf you encounter any issues while using Migration Toolkit for Virtualization Operator, create a [support case](https://access.redhat.com/support/cases/) for bugs, enhancements, or other requests.\n\n### Contributing\nYou can contribute by:\n\n* Creating a case in the [Red Hat Customer Portal](https://access.redhat.com/support/cases/) with any issues you find using Migration Toolkit for Application and its Operator.\n* Fixing issues by opening Pull Requests in the [KubeV2V](https://github.com/kubev2v/) under Forklift Projects.\n* Improving Forklift upstream [documentation](https://github.com/kubev2v/forklift-documentation/).\n",
+                "displayName": "Migration Toolkit for Virtualization Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": false
+                    }
+                ],
+                "keywords": [
+                    "migration",
+                    "forklift",
+                    "konveyor",
+                    "mtv"
+                ],
+                "links": [
+                    {
+                        "name": "Migration Toolkit for Virtualization Documentation",
+                        "url": "https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization"
+                    },
+                    {
+                        "name": "Forklift Operator",
+                        "url": "https://github.com/kubev2v/forklift"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat",
+                        "email": "openshift-operators@redhat.com"
+                    }
+                ],
+                "maturity": "stable",
+                "minKubeVersion": "1.27.0",
+                "provider": {
+                    "name": "Red Hat"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "api",
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:ac59fabb007b61c4fbe21ab8f8857e7f965cbeb2abd4f347b74a44ff1dbb6b51"
+        },
+        {
+            "name": "cli_download",
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:ed1ea24644a55439fa001e29fafbf0e8de97829850649163adfd463ac2612d4a"
+        },
+        {
+            "name": "ui_plugin",
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:b9f329fbefed3d2732dc3057687d8f0b272c5ae1e04f3f44dc9e8e14912886bd"
+        },
+        {
+            "name": "controller",
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:b3574bcbef885d530c40c67eb3a12e9b97958580438cd0e2d8334eede2f7350c"
         },
         {
             "name": "deep-inspection",
@@ -17195,59 +18553,59 @@
         },
         {
             "name": "deep-inspection-rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel9@sha256:c19c641fa98a7a613fea35b44aeffa2e956831e2516ce08e3320fb6ebbd7334d"
+            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel9@sha256:65aaeed8efcec9205fb71139c6ed8b33dc8e4dca98d8372478a9047a896d3ebd"
         },
         {
             "name": "hyperv_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:cce0992bbaba2bf0d06463dceff107a0ce6bc61707b420e8663e6f75b1e93bc5"
+            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:a7b9a11f5f515e9cfd9dab53ff3250403d0a39595eed09f7bf33b133aa95e871"
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:a372418fe138b5ee391637a735c5d50f7d3f980bab641b44ec201732af9b0494"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel8@sha256:996b6e94d4d5fe7d0839c05cb9aa028465551b29b7a469ce36f3f3ed05bbfd92"
         },
         {
             "name": "openstack_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-openstack-populator-rhel9@sha256:d6659643f0d9221952d14db57c91b14fb83d3277a2a9b57aa01ef214b4101806"
+            "image": "registry.redhat.io/mtv-candidate/mtv-openstack-populator-rhel9@sha256:b234822f5ff0294732a5bd8fd3de058257f450c310467ce1f21d84f7a9cd98fa"
         },
         {
             "name": "ova_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:4b2f8042b810a0be9f542fa5cb4ab4358168484d108f7d4956b6620d9945e531"
+            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:fcb300eefb9bcd7ce5f8b0eda3f4b23b8f41945b968d0ffdb470a98961ecbd08"
         },
         {
             "name": "ova_proxy",
-            "image": "registry.redhat.io/mtv-candidate/mtv-ova-proxy-rhel9@sha256:6e294584b1d18c147259f86c183209eb6a5a2d965209bcc67689c85b8239e886"
+            "image": "registry.redhat.io/mtv-candidate/mtv-ova-proxy-rhel9@sha256:01566787e06bb7a674119fa9ab7e0b8898a27552105eb2fa04bdc9818fffcc81"
         },
         {
             "name": "populator_controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:8534597f47733eee294e1fa653942459db04aa967a138081ecbd291914476c00"
+            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:a21f6f57f333c49c54c2d161db68af49ce3e420da660a54020983aa436b9b106"
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:8b1e42611fcc1637a2baaa5bb04b6c3403461dea8fc0f62ffdf492e87f58a34a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:c449b55269204e8dcb3558ea56219d10d99ec20c4299482b2741147ebc3e4aad"
         },
         {
             "name": "rhv_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:510e56434dc29b50b8f58e8f00b59735d0d0c2a7b07dd7f59fb9e25237182dfc"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:c59d78b96d3888a84529cdc1d916771a0eb07b96dd2e85f796dca0f3bb8e688d"
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:231f48c86390a60bc9801cc7c0e05415d5c1c023f44008412204f48ac4d4ca4a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:f868a1be0ff5e5773ea3a2bb28f9dfdb25366b21277461cff0f8827dad442541"
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:8263c01a40fe1044ebddb01116bc8db01cabec252167f66c032c9bc30d182e62"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel10@sha256:0786f415f4a93967b1125c4214fe11e7eb840212f36a2649415e2ab318e3fa23"
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:a61e28b38319f3c71d2b14f0332c0ef0ce31a338749bf4473db0734548a7d0b9"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:fc064a6981908f12f7432dbc492ea8efeed91ced15563f3f8ce0fde85d2d83fb"
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:358bffe4ceda196fddfa3dd7d54bbeff336f207a711a62136ed74199e2fa9189"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:2ef0cb15fa01b647d16ed2b55ccd0c143f71a2942438bfe8ec6d5fdc312b89f3"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:93f22826984881d8606fdca4d4da06fef45c797afd18afdd878971968cdff784"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:222c7318e67a6904c389cb5b067e278af2a15cb2f087f7bfc7c48f1d09359a51"
         }
     ]
 }
