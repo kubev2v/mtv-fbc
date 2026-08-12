@@ -17,14 +17,18 @@ helpFunction()
 }
 
 dockerfile()
-{   
+{
     suffix="-rhel9"
     if [[ "$1" =~ ^v4.1(1|2|3|4)$ ]]; then suffix="" ; fi
+
+    # Use openshift5 registry for 5.x versions, openshift4 for 4.x
+    registry_path="openshift4"
+    if [[ "$1" =~ ^v5\. ]]; then registry_path="openshift5" ; fi
 
     cat <<EOT > "$1"/catalog.Dockerfile
 # The base image is expected to contain
 # /bin/opm (with a serve subcommand) and /bin/grpc_health_probe
-FROM registry.redhat.io/openshift4/ose-operator-registry${suffix}:$1
+FROM registry.redhat.io/${registry_path}/ose-operator-registry${suffix}:$1
 
 # Configure the entrypoint and command
 ENTRYPOINT ["/bin/opm"]
