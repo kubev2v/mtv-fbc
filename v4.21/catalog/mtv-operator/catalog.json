@@ -18612,7 +18612,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.6",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:3a83c4b301a317085e8f87b360ef47d21b324c60d7f18197c43c18ebb2af6ea0",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:cb2895f03be569249521af25796f9959f4059d3c0c14bcc79e04939455fa1faf",
     "properties": [
         {
             "type": "olm.gvk",
@@ -18741,8 +18741,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:c2fd827128c15fadffe15ffb9d9b47c0c2ca49456b73a60d751217be70449420",
-                    "createdAt": "2026-08-13T16:34:20Z",
+                    "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:2f06b5bc71f8388bd67c656b6bb950438b391e24cae7a3d23c263fad5106ef5a",
+                    "createdAt": "2026-08-16T16:45:42Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -19885,7 +19885,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:a7f5d2e66cc5593c661871a3487cccf385133d444593f13ffc120c3bd8bacbdf"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:5297dcb2f5a094f9c26c2b4aff7327e24b4faf2d3ad13a169360199421e9b20e"
         },
         {
             "name": "cli_download",
@@ -19893,11 +19893,11 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:8bdc789ea26628a53207a63d6de64a718dcddddebfd0f0d80d641fed0bc5f2a9"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:b2e1576da3ca032835e2270c22da474a2dcdc60aa76aaedded1fe08541eb846c"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:32a73cfa2d602ece397f91946b06b89c442f1eb75e3bc345b53287af861536ec"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:cf8522d142acba1e8c45a66a0f5a5301c665c63ea09b2fa50493db4286d9c1ae"
         },
         {
             "name": "deep-inspection",
@@ -19933,7 +19933,7 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:c2fd827128c15fadffe15ffb9d9b47c0c2ca49456b73a60d751217be70449420"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:2f06b5bc71f8388bd67c656b6bb950438b391e24cae7a3d23c263fad5106ef5a"
         },
         {
             "name": "rhv_populator",
@@ -19945,7 +19945,7 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:66f358d30608c019d1e706f59dee6c2879da7e9020aa8700f89ff7827d100ae5"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:595e5f44267d5ed249613287ae669ca23d0233d15cf2f8943f94d2594abf97ea"
         },
         {
             "name": "virt_v2v_rhel9",
@@ -19957,7 +19957,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:3a83c4b301a317085e8f87b360ef47d21b324c60d7f18197c43c18ebb2af6ea0"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:cb2895f03be569249521af25796f9959f4059d3c0c14bcc79e04939455fa1faf"
         }
     ]
 }
