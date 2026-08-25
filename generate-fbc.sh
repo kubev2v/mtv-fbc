@@ -63,8 +63,17 @@ case $cmd in
     OCPV=${FROMV##*:}
     from=registry.redhat.io/redhat/redhat-operator-index:${OCPV}
     ./opm migrate $(opm_alpha_params "${frag}") "$from" "./catalog-migrate-${frag}"
-    # convert-template does not support opm alpha params (as of right now)
-    ./opm alpha convert-template basic "./catalog-migrate-${frag}/${package_name}/catalog.json" > "${frag}/catalog-template.json"
+    migrated="./catalog-migrate-${frag}/${package_name}/catalog.json"
+    if [ -f "$migrated" ]; then
+      # Package is published in the index: (re)seed the template from it. ./opm alpha convert-template basic "$migrated" > "${frag}/catalog-template.json"
+    elif [ ! -f "${frag}/catalog-template.json" ]; then
+      # Package absent from the index AND no existing template to fall back on.
+      echo "ERROR: ${package_name} not found in ${from} and no existing" \
+        "${frag}/catalog-template.json to seed from. Seed it manually first." >&2
+      rm -rf "./catalog-migrate-${frag}"
+      exit 1
+    fi
+    # else: index lacks the package but a hand-seeded template exists -> keep it
     ./opm alpha render-template basic $(opm_alpha_params "${frag}") "${frag}/catalog-template.json" > "${frag}/catalog/${package_name}/catalog.json"
     rm -rf "./catalog-migrate-${frag}"
   ;;
