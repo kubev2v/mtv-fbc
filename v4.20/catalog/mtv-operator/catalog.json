@@ -29063,7 +29063,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.8",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:598e369f0b9adde260007a98219086fed469d97cca0a3571c314b4d55d3064c1",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:c90aa2da918fb444778785451c7997279ff875269ec2efc888c86eb237fcb5ef",
     "properties": [
         {
             "type": "olm.gvk",
@@ -29193,7 +29193,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:5426486a982a7048dcff0ae0ea9e5d57641c0cd66ef8620091e80f175cbed2a1",
-                    "createdAt": "2026-09-02T06:45:56Z",
+                    "createdAt": "2026-09-04T00:10:35Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -30336,7 +30336,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:bed8942483a92e2c7823e39f18254f4ed91195d359f218d8a3a94f0b5365a2ca"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:46e76b35901dfe2781a24dbb22a16dd5134ab205ed5a4f79e3628eda26b63bf5"
         },
         {
             "name": "cli_download",
@@ -30344,11 +30344,11 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:ebfc8ba415db399c752fceddf1cb62329913a7a363412fcd2c7fa27e8ee66a12"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:d8c4c88b876e55eb6f7c90359d744b9b19619b429a2ead829c77e7df342b2fa8"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:761bd69bb334e04b927a2dfad7d93b253f833718c9652965a8b7ad2dbcf66bd1"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:67a1ef8428a7e6c58df361b92f408b5fc2fe8fea003a75c4b7014a6fbb496339"
         },
         {
             "name": "deep-inspection",
@@ -30396,11 +30396,11 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:6dd36367a3562efa2c0b5eaa5a275374a245a44029bcece1c2db144a4bd88548"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:d646cc3af3729fc1cbb64c6dfbc965c1e9877d7d3a9431b02caa62e859c12fca"
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:ec42a299612fafee33c7ad77de86fc5e21df8aab62adfd24e12df4b287e776e1"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:2e5333ba4842bf407827304314b02858bf95c52b3d202c9b5ea7833e0bd5436d"
         },
         {
             "name": "vsphere_copy_offload_populator",
@@ -30408,7 +30408,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:598e369f0b9adde260007a98219086fed469d97cca0a3571c314b4d55d3064c1"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:c90aa2da918fb444778785451c7997279ff875269ec2efc888c86eb237fcb5ef"
         }
     ]
 }
