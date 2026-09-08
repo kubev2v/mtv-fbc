@@ -29063,7 +29063,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.8",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:e18a30532e4dd8203ced95bb1a574c06399e47113326a02a65fcc7284520c2eb",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:0e9b7f48684a6d5fc484188fb97a31c029398df8d977cef0be6e9b2f9a49264a",
     "properties": [
         {
             "type": "olm.gvk",
@@ -29193,7 +29193,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:5426486a982a7048dcff0ae0ea9e5d57641c0cd66ef8620091e80f175cbed2a1",
-                    "createdAt": "2026-09-07T18:43:22Z",
+                    "createdAt": "2026-09-08T07:08:28Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -30348,7 +30348,7 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:67a1ef8428a7e6c58df361b92f408b5fc2fe8fea003a75c4b7014a6fbb496339"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:0d42c34788997da6c3c285a19b11a32a2ac8d337fee201669f6ac5d9e8d14ea1"
         },
         {
             "name": "deep-inspection",
@@ -30408,7 +30408,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:e18a30532e4dd8203ced95bb1a574c06399e47113326a02a65fcc7284520c2eb"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:0e9b7f48684a6d5fc484188fb97a31c029398df8d977cef0be6e9b2f9a49264a"
         }
     ]
 }
