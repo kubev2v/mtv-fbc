@@ -22,7 +22,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v5.0.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20b5246abac2fd09e82b30fe98c0b578c73b49a3fabfbfc1525075438d176b8b",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:73ae8e8a72c552ab07a233e48eb2e5472705b7234325da02d07d11273b145332",
     "properties": [
         {
             "type": "olm.gvk",
@@ -151,8 +151,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:737d334af6f28d198f227a901dd746a45d8a068cbbaa18bc2742d6c39bf2b6f2",
-                    "createdAt": "2026-09-04T00:18:32Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:a1944729a80bf37f102acb0c8fe5007eb06916a605045d3ab60035bc726c582c",
+                    "createdAt": "2026-09-09T13:25:02Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -167,7 +167,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
                     "operatorframework.io/suggested-namespace": "openshift-mtv",
-                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:2e4504826d8db17ade93b4304dd4dcc703062bf08d49a77f229445cf9b41980a",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:93be137d7471f5e4ce4cd5dbad212d92337f44ac2ee8c49e45f1fc432e2ee706",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
                     "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
@@ -1295,7 +1295,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:52b265f9418a60c33bf343fb304183e19cf05f7c68dec323ae432b209e5090db"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:0ab699229c788cd1305cff250dd42accd00ec1ae397c06aabbbc410fe49027cd"
         },
         {
             "name": "cli_download",
@@ -1303,11 +1303,11 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:cd20e1d8d3ce000b6dc6a36c12d53ae48f0d553e29b02962b3e46321109adbef"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:1e7f7565ee7aa49650b1dfca2f57e75b31d2ca468cedbee70123b4ee872879e7"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:7ab28bde7468464374ef6b50926da796d126e25b235b035554f9f604673f90b2"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:d9132e0d5643637b2f83c5e8b865b8f8ba3db93caf275416059db942172bea92"
         },
         {
             "name": "deep-inspection",
@@ -1319,11 +1319,11 @@
         },
         {
             "name": "hyperv_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:c4586caa06888b9af8f682c115737fb8cb0d9477d191c4f466543cd11d1e6d83"
+            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:0d361eb124186297fbfb3431a5e0886066c14ab2cecccffa5bf48b784de439e9"
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:2e4504826d8db17ade93b4304dd4dcc703062bf08d49a77f229445cf9b41980a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:93be137d7471f5e4ce4cd5dbad212d92337f44ac2ee8c49e45f1fc432e2ee706"
         },
         {
             "name": "openstack_populator",
@@ -1343,11 +1343,11 @@
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:737d334af6f28d198f227a901dd746a45d8a068cbbaa18bc2742d6c39bf2b6f2"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:a1944729a80bf37f102acb0c8fe5007eb06916a605045d3ab60035bc726c582c"
         },
         {
             "name": "rhv_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:46016cc6c3ac9f77d05eb3d97849ff6e557ee02afb8d16ea93de3609bd8f686f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:efb4498a96e646cba287e0240645e7349030920913e09345d8bd6382961e7292"
         },
         {
             "name": "validation",
@@ -1359,15 +1359,15 @@
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:69b6b910c69658bfb9be6064ce9854b1824a7e17487f45f1ff310bf23d14e14f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:911d046017867b33c6077e7b087684e3dfb3b283dddcfe5eb66185e37a548fb2"
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:8453c205bced5fb79f2bea0e596d169d77637442aab5b6064ca8e55723577692"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:04c0bc8c485d2b47b3475184ac15a365bb4e1fb3c58c3550006d2b4774430612"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20b5246abac2fd09e82b30fe98c0b578c73b49a3fabfbfc1525075438d176b8b"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:73ae8e8a72c552ab07a233e48eb2e5472705b7234325da02d07d11273b145332"
         }
     ]
 }
