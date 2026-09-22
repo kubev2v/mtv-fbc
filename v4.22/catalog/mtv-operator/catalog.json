@@ -13441,7 +13441,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.9",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:2eb2386035fb5c01c9dc4b628b7e36d6274f745cbe50da0dcba4720531f6f6da",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:8cb6ad843139e820c8f8d22e73bef107aabef3e4c14a9a782f768f5dac2143fa",
     "properties": [
         {
             "type": "olm.gvk",
@@ -13571,7 +13571,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:4849d9a43af796d64de854e796960275f35da94d8c5b90b162447f04744a3a2a",
-                    "createdAt": "2026-09-21T09:57:06Z",
+                    "createdAt": "2026-09-22T11:22:33Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -14774,7 +14774,7 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:4044f873b1e3ef6e7cde9c1f6b3014ac2f35e5be0037091a49a9ad0a10079e83"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:36266543303e3b78841c7894f7fc745ab8351507b638bc9766d0b378733180b5"
         },
         {
             "name": "virt_v2v_rhel9",
@@ -14786,7 +14786,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:2eb2386035fb5c01c9dc4b628b7e36d6274f745cbe50da0dcba4720531f6f6da"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:8cb6ad843139e820c8f8d22e73bef107aabef3e4c14a9a782f768f5dac2143fa"
         }
     ]
 }
