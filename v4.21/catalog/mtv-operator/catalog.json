@@ -10509,7 +10509,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.11.8",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:fc01a1ab3a98797c1b368dd77ecbf2c208fe17c9ac5da3779e890dfd96a17505",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:09e81f60658020b9bf360c7a40e6938d2fad82f73de1a6e6fc64e72819a8eb3f",
     "properties": [
         {
             "type": "olm.gvk",
@@ -10631,7 +10631,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:350e8b2797d86ec25bf2592c9df462c294c780d4c98ebe8b84e57b7c02fb3661",
-                    "createdAt": "2026-09-17T06:31:51Z",
+                    "createdAt": "2026-09-19T07:50:22Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -11635,7 +11635,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:6181c0feba33204cc7856fabe08cbbb0e6e560e553820f85dbd6f273eac7ca72"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:328ab26baa5afdc5b9da78dd11a37e052b0a92a8c77d2739f9af631e9e409e6e"
         },
         {
             "name": "controller",
@@ -11643,7 +11643,7 @@
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel9@sha256:31bba091b64c4c827785837977f0b868e97e805081756a684867871b83fc33a7"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-must-gather-rhel9@sha256:a5b25cfb0463f56de1843f97fde9e144719612a01a9a7906d6d31dbc0744a229"
         },
         {
             "name": "openstack_populator",
@@ -11687,7 +11687,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:fc01a1ab3a98797c1b368dd77ecbf2c208fe17c9ac5da3779e890dfd96a17505"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:09e81f60658020b9bf360c7a40e6938d2fad82f73de1a6e6fc64e72819a8eb3f"
         }
     ]
 }
