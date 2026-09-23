@@ -8963,7 +8963,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.10.8",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:32dbb66b856600e1a2b11bff58bd7f16937310d8af37e32dbbbd8d87ff0163f0",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:adc21afd37606575eb0fa7ac2db511ae27b6666886c26eecc9c83e77719c808e",
     "properties": [
         {
             "type": "olm.gvk",
@@ -9077,7 +9077,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:ef941d8f959dd4d9dab6c85d6be073c827cfa90914052146987b864e612e814b",
-                    "createdAt": "2026-09-16T04:43:55Z",
+                    "createdAt": "2026-09-23T01:12:39Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -10019,7 +10019,7 @@
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:eb931b57cb4c9c3d69f67bebce583a14e9bbe9745a081b8f4c2865f56a137500"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-console-plugin-rhel9@sha256:bd006806e0c3766006172110e21c99cbb58b2e03785ca0ced8d17488095041e2"
         },
         {
             "name": "controller",
@@ -10071,7 +10071,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:32dbb66b856600e1a2b11bff58bd7f16937310d8af37e32dbbbd8d87ff0163f0"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:adc21afd37606575eb0fa7ac2db511ae27b6666886c26eecc9c83e77719c808e"
         }
     ]
 }
