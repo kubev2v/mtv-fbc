@@ -20955,7 +20955,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.10",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:28c41516177e63486c2b8a1776e83d211a53e355fcdab2bc616796eb24b7d053",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:f33ba4d24f6eb4fd8f71eb46764f29541fac08d566b1a533207b8878ec2ddb11",
     "properties": [
         {
             "type": "olm.gvk",
@@ -21085,7 +21085,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:31f1e66808617b15c435446e83bdec44246e3dc8288d55b3b8c2e0cf3e286077",
-                    "createdAt": "2026-10-01T18:05:12Z",
+                    "createdAt": "2026-10-06T08:50:21Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -22288,11 +22288,11 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:17c336fdef41acc68f4edb8f1923e6463ca5c5b48b908661fc097f4c8a6bc114"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:243793fcc5d98824a0cd9787f7051ee28f6388aaf740befa8d1d0f7b16e10d61"
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:1bbe9ea3081e4e0dd8f1859b488eeaa5a193a0a3aefb8c210a58971168f27810"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel9@sha256:52e64125af4785fb8d21f66af89a5f771c22f0e75918f206a1c25c015faa4fd5"
         },
         {
             "name": "vsphere_copy_offload_populator",
@@ -22300,7 +22300,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:28c41516177e63486c2b8a1776e83d211a53e355fcdab2bc616796eb24b7d053"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:f33ba4d24f6eb4fd8f71eb46764f29541fac08d566b1a533207b8878ec2ddb11"
         }
     ]
 }
