@@ -130,6 +130,14 @@ spec:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/hyperv-provider-server-dev-preview
       source: registry.redhat.io/migration-toolkit-virtualization/mtv-hyperv-provider-server-rhel9
     - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/copy-appliance-builder-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/copy-appliance-builder-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-copy-appliance-builder-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/copy-appliance-nbd-container-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/copy-appliance-nbd-container-dev-preview
+      source: registry.redhat.io/migration-toolkit-virtualization/mtv-copy-appliance-nbd-container-rhel10
+    - mirrors:
         - registry.stage.redhat.io/mtv-candidate/mtv-controller-rhel9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-controller-2-9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-controller-2-10
@@ -408,6 +416,14 @@ spec:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/hyperv-provider-server-2-12
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/hyperv-provider-server-dev-preview
       source: registry.stage.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/copy-appliance-builder-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/copy-appliance-builder-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-copy-appliance-builder-rhel9
+    - mirrors:
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-12/copy-appliance-nbd-container-2-12
+        - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-dev-preview/copy-appliance-nbd-container-dev-preview
+      source: registry.stage.redhat.io/mtv-candidate/mtv-copy-appliance-nbd-container-rhel10
     - mirrors:
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-9/forklift-operator-2-9
         - quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-operator-2-10/forklift-operator-2-10
