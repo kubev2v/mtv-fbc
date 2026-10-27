@@ -22,6 +22,8 @@ spec:
     value: '{{source_url}}'
   - name: revision
     value: '{{revision}}'
+  - name: mtv-version
+    value: '{{body.pull_request.title}}' 
   - name: output-image
     value: quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-fbc-prod-v422:on-pr-{{revision}}
   - name: image-expires-after
@@ -332,6 +334,9 @@ spec:
         value: $(tasks.build-image-index.results.IMAGE_URL)
       - name: IMAGE_DIGEST
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
+      - name: ADDITIONAL_TAGS
+        value:
+        - $(params.mtv-version)
       runAfter:
       - build-image-index
       taskRef:
