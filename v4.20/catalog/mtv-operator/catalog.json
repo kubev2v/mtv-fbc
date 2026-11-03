@@ -24625,7 +24625,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.11",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:43d3f95bdac456d109ba3607a1100c43bda4310a5d99da2047fc653f06ad6c8c",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73bc7bc219d7bbec3569a1ff598cd2047a9d29a48751f51e5a714ade909899a8",
     "properties": [
         {
             "type": "olm.gvk",
@@ -24755,7 +24755,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:eb3dadac88e7945c14c85142c11b6cd2bd5c6e4a280d6a777f5659ba93f87247",
-                    "createdAt": "2026-10-26T23:36:00Z",
+                    "createdAt": "2026-11-02T06:30:46Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -25898,7 +25898,7 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:90c5c5ea39972f46bb4f5499052bd1ba8b9c265674e1dd0bb894507b8c2de67c"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-api-rhel9@sha256:fcd552f04aab9922b0f323158d1942b8b28faf867f193dc2d0823d22cc953b65"
         },
         {
             "name": "cli_download",
@@ -25910,7 +25910,7 @@
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:e1871447acb0b80cae9a8a055fcb321de36bc804ebe6b29a65f8de76954e12fc"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-controller-rhel9@sha256:1228b7de49f935fd26652aeaa3228e4bb065afd022d10c982559110e27e30f0a"
         },
         {
             "name": "deep-inspection",
@@ -25970,7 +25970,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:43d3f95bdac456d109ba3607a1100c43bda4310a5d99da2047fc653f06ad6c8c"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:73bc7bc219d7bbec3569a1ff598cd2047a9d29a48751f51e5a714ade909899a8"
         }
     ]
 }
