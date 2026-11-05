@@ -22,6 +22,8 @@ spec:
     value: '{{source_url}}'
   - name: revision
     value: '{{revision}}'
+  - name: mtv-version
+    value: '{{body.pull_request.title}}' 
   - name: output-image
     value: quay.io/redhat-user-workloads/rh-mtv-1-tenant/forklift-fbc-prod-v422:on-pr-{{revision}}
   - name: image-expires-after
