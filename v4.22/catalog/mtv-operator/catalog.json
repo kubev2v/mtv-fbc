@@ -5344,7 +5344,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v2.12.11",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:aad7a977781c324da7507953021dd6604d54877abee07b683c0f40054bb85d45",
+    "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:3cccd6f54f428c118f8d2624502756c4d9f5a9e5bcc4cde86d6c46818915f989",
     "properties": [
         {
             "type": "olm.gvk",
@@ -5474,7 +5474,7 @@
                     "categories": "OpenShift Optional",
                     "certified": "true",
                     "containerImage": "registry.redhat.io/migration-toolkit-virtualization/mtv-rhel9-operator@sha256:137f2395cf29f249b95083ed06922012723feb87abfed46a54e8b8bd6a0af569",
-                    "createdAt": "2026-11-09T21:22:58Z",
+                    "createdAt": "2026-11-09T22:07:56Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -6677,7 +6677,7 @@
         },
         {
             "name": "virt_v2v",
-            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:f20fdf7bea93928d34e023d2eea605a1299957a75b8206b118a2aa290ae4958b"
+            "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-virt-v2v-rhel10@sha256:0f86f854ba2148486f83cffd3d65cfcbb4a6fcce3cd4d0bde5edbbf95a7451cb"
         },
         {
             "name": "virt_v2v_rhel9",
@@ -6689,7 +6689,7 @@
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:aad7a977781c324da7507953021dd6604d54877abee07b683c0f40054bb85d45"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:3cccd6f54f428c118f8d2624502756c4d9f5a9e5bcc4cde86d6c46818915f989"
         }
     ]
 }
