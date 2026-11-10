@@ -30,6 +30,10 @@ spec:
     value: v5.1/catalog.Dockerfile
   - name: path-context
     value: .
+  - name: mtv-version
+    value: '{{ cel: body.head_commit.message }}'
+  - name: apply-mtv-version-tag
+    value: '{{ cel: body.head_commit.message.matches("^[0-9]+[.][0-9]+[.][0-9]+(-release)?$") ? "true" : "false" }}'
   pipelineSpec:
     description: |
       This pipeline is ideal for building and verifying [file-based catalogs](https://konflux-ci.dev/docs/end-to-end/building-olm/#building-the-file-based-catalog).
@@ -356,6 +360,9 @@ spec:
         value: $(tasks.build-image-index.results.IMAGE_URL)
       - name: IMAGE_DIGEST
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
+      - name: ADDITIONAL_TAGS
+        value:
+        - $(params.mtv-version)
       runAfter:
       - build-image-index
       taskRef:
@@ -367,6 +374,11 @@ spec:
         - name: kind
           value: task
         resolver: bundles
+      when:
+      - input: $(params.apply-mtv-version-tag)
+        operator: in
+        values:
+        - "true"
     - name: validate-fbc
       params:
       - name: IMAGE_URL
