@@ -152,7 +152,7 @@
         },
         {
             "schema": "olm.bundle",
-            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:3cccd6f54f428c118f8d2624502756c4d9f5a9e5bcc4cde86d6c46818915f989"
+            "image": "registry.stage.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:69382945f842dacf97cbb8b304b65eeb4b9f9ebce211c197c062111fb9e88b8e"
         }
     ]
 }
