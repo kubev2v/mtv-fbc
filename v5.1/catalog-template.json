@@ -24,6 +24,21 @@
         {
             "schema": "olm.bundle",
             "image": "registry.redhat.io/migration-toolkit-virtualization/mtv-operator-bundle@sha256:69c722fc321d7016b82dfe10487497e1be56306863670febd1c35fc36b0bc396"
+        },
+        {
+            "entries": [
+                {
+                    "name": "mtv-operator.v5.1.0",
+                    "skipRange": ">=0.0.0 <5.1.0"
+                }
+            ],
+            "name": "dev-preview",
+            "package": "mtv-operator",
+            "schema": "olm.channel"
+        },
+        {
+            "schema": "olm.bundle",
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20a54f142bc71d0f8b177b5d0fb54fb7aaaea3bc0bd5d6c9fde6c25312e55cf4"
         }
     ]
 }
