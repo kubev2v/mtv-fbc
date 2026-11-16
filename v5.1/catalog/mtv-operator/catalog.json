@@ -1420,7 +1420,7 @@
     "schema": "olm.bundle",
     "name": "mtv-operator.v5.1.0",
     "package": "mtv-operator",
-    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:477f05f8eb992e219465b61b45a16c3d4cddd294644682681eedac765db08891",
+    "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20a54f142bc71d0f8b177b5d0fb54fb7aaaea3bc0bd5d6c9fde6c25312e55cf4",
     "properties": [
         {
             "type": "olm.gvk",
@@ -1565,8 +1565,8 @@
                     "capabilities": "Seamless Upgrades",
                     "categories": "OpenShift Optional",
                     "certified": "true",
-                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:16aeb8a889d1ff4a1216e070939962e2372fd0ae29b509e37d2c60c123887a0a",
-                    "createdAt": "2026-11-10T21:42:53Z",
+                    "containerImage": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:713db139e3b7151a1b69291cb63afe013c798ac1cf9a84194ea771cce8724ce7",
+                    "createdAt": "2026-11-14T03:07:31Z",
                     "description": "Facilitates migration of VM workloads to OpenShift Virtualization",
                     "features.operators.openshift.io/cnf": "false",
                     "features.operators.openshift.io/cni": "false",
@@ -1581,7 +1581,7 @@
                     "features.operators.openshift.io/token-auth-gcp": "false",
                     "operatorframework.io/initialization-resource": "{\n  \"apiVersion\": \"forklift.konveyor.io/v1beta1\",\n  \"kind\": \"ForkliftController\",\n  \"metadata\": {\n    \"name\": \"forklift-controller\",\n    \"namespace\": \"openshift-mtv\"\n  },\n  \"spec\": {\n    \"feature_ui_plugin\": \"true\",\n    \"feature_validation\": \"true\",\n    \"feature_volume_populator\": \"true\"\n  }\n}",
                     "operatorframework.io/suggested-namespace": "openshift-mtv",
-                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:0860ce8b6a077e531c4e6875a225030af712ecefdc393bf67bbcdd836f3800eb",
+                    "operators.openshift.io/must-gather-image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:9b84e8d3021bf1bff822fabb99519893d2956044edac5683191fd2b009295c78",
                     "operators.openshift.io/valid-subscription": "[\"OpenShift Kubernetes Engine\", \"OpenShift Container Platform\", \"OpenShift Platform Plus\"]",
                     "operators.operatorframework.io/builder": "operator-sdk-v1.36.1-ocp",
                     "operators.operatorframework.io/project_layout": "ansible.sdk.operatorframework.io/v1",
@@ -2727,71 +2727,71 @@
     "relatedImages": [
         {
             "name": "api",
-            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:3f3116acef9ef1dfb12a179a8f5cdb4f77ef23360df925a65e64b994ea6fb2d9"
+            "image": "registry.redhat.io/mtv-candidate/mtv-api-rhel9@sha256:a5442b4e2134e7a7d8999d54d6fb09bdec213afbed5dfa001ec724da8e281ea2"
         },
         {
             "name": "cli_download",
-            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:462cf4a61f5a53e6bd86a3761571dad46a00bdd5c72c76b04a2c191615c0082d"
+            "image": "registry.redhat.io/mtv-candidate/mtv-cli-download-rhel9@sha256:d01a32f58ed15ba0af7d1d73853d2f263bb226f384c7bfd9912da7dff5e4050c"
         },
         {
             "name": "ui_plugin",
-            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:25761793542b245208070a494ab951ea28ea5bd6c449e2f986dbeca1c424a91f"
+            "image": "registry.redhat.io/mtv-candidate/mtv-console-plugin-rhel9@sha256:9aeeead89b9f0127053566ca1afa0a87b132a17a218b134420b4e84d233e996c"
         },
         {
             "name": "controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:a7d03876c3cda77dd7ada5278d3e59224c57eb0f68b7f470848965c0f4174118"
+            "image": "registry.redhat.io/mtv-candidate/mtv-controller-rhel9@sha256:ceffcdec9e4d1e4c9674106d1c4c00781ad24c6a7396eb388baa6b0bbcbda6a1"
         },
         {
             "name": "copy_appliance_template_builder",
-            "image": "registry.redhat.io/mtv-candidate/mtv-copy-appliance-builder-rhel9@sha256:ec3b3cfcb5d8709857f7b1ef55bb94f022b84a38718a3a2bb953ba43fe9d7582"
+            "image": "registry.redhat.io/mtv-candidate/mtv-copy-appliance-builder-rhel9@sha256:b3a13e2aa91cf9d5f12077df6103a5ae5d7603a1e1e1b6ce90b36da53dc06c9b"
         },
         {
             "name": "copy_appliance_container",
-            "image": "registry.redhat.io/mtv-candidate/mtv-copy-appliance-nbd-container-rhel9@sha256:05d47aea5fa87a859fc4f8b4e98ab81897c28f893816322ede3ee0d1d945c755"
+            "image": "registry.redhat.io/mtv-candidate/mtv-copy-appliance-nbd-container-rhel9@sha256:c66c023564d8bfb135d2e1446a0790a240dc49805dde9a27a28e2d4d384ad8f9"
         },
         {
             "name": "deep-inspection",
-            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel10@sha256:616707c96bde12ae9642437c4d64611ef8b3436674038b7394377b3dced503cf"
+            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel10@sha256:2b0700b3b42144be60a89633475cf52fe192197c6c57a31d567e1cacc92992f2"
         },
         {
             "name": "deep-inspection-rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel9@sha256:9421f7cb5a508cdb800144126486460d5dc8b9bca2e0850593458e5363ec4574"
+            "image": "registry.redhat.io/mtv-candidate/mtv-deep-inspection-rhel9@sha256:0255ca351644ecfae9da96a2f3f52107c01898aed03211dcd3dfb9e6b620d547"
         },
         {
             "name": "hyperv_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:6e4ed057404517d02037a10dd877ee93b75010c84a2bfc803e9b776bef3ab1f6"
+            "image": "registry.redhat.io/mtv-candidate/mtv-hyperv-provider-server-rhel9@sha256:712c326304c1c323ef57df167870e7afc3bcbef22b6a4b53f97f5384be1bb483"
         },
         {
             "name": "must_gather",
-            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:0860ce8b6a077e531c4e6875a225030af712ecefdc393bf67bbcdd836f3800eb"
+            "image": "registry.redhat.io/mtv-candidate/mtv-must-gather-rhel9@sha256:9b84e8d3021bf1bff822fabb99519893d2956044edac5683191fd2b009295c78"
         },
         {
             "name": "openstack_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-openstack-populator-rhel9@sha256:62eaae0f99367115577602e9854a4477c8e3829cf31910276ee8410e48e323ce"
+            "image": "registry.redhat.io/mtv-candidate/mtv-openstack-populator-rhel9@sha256:862a86fac092779f59eb8082653ba102019797e13294803096fe385b38d0d28d"
         },
         {
             "name": "ova_provider_server",
-            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:03037f246963740ab962cc857ebb7079928df880a37f76e17b3c77558cbcd34c"
+            "image": "registry.redhat.io/mtv-candidate/mtv-ova-provider-server-rhel9@sha256:c5b696fb0d0c5c883796e73b7dcb706fa9cd00d45576eb4b2c617d1f99dce6da"
         },
         {
             "name": "ova_proxy",
-            "image": "registry.redhat.io/mtv-candidate/mtv-ova-proxy-rhel9@sha256:0cfcbcb5254579013db33ef9986e90661e16492e3d3fafd5111768f3fd8118d3"
+            "image": "registry.redhat.io/mtv-candidate/mtv-ova-proxy-rhel9@sha256:54f01492ba0fd8867b58222481fd1b09107b8e805ef2bab1e133ed6dc7431522"
         },
         {
             "name": "populator_controller",
-            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:cfef1a10b8a5152b4fd6cc763098128aa2e089534d27e844de0f7db10cf60b83"
+            "image": "registry.redhat.io/mtv-candidate/mtv-populator-controller-rhel9@sha256:fc22a12d6ef9bb2f43c543bf70530777f535f0b875b42e33ae45e1a174e256c0"
         },
         {
             "name": "forklift-operator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:16aeb8a889d1ff4a1216e070939962e2372fd0ae29b509e37d2c60c123887a0a"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhel9-operator@sha256:713db139e3b7151a1b69291cb63afe013c798ac1cf9a84194ea771cce8724ce7"
         },
         {
             "name": "rhv_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:19168382e262eaf8a47777c7bf1fcae01f2ef8b7b33f6b00a8319c073194933d"
+            "image": "registry.redhat.io/mtv-candidate/mtv-rhv-populator-rhel8@sha256:0dfb08e8af6bb4ff29a32d9e844d5594d53a2c7e9566c666c31bf3fa2be4c10c"
         },
         {
             "name": "validation",
-            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:50696f86e76fefd904dd39230e2fa20a67bbb1d3942f51661720992b094b2eac"
+            "image": "registry.redhat.io/mtv-candidate/mtv-validation-rhel9@sha256:53ecc94d4282f9058c869ec0eaa7d0c003238868e3bb6b3c3920a9000bb55cb9"
         },
         {
             "name": "virt_v2v",
@@ -2799,15 +2799,15 @@
         },
         {
             "name": "virt_v2v_rhel9",
-            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:cabd2b27bb86ff9dcc70b8b97ac4ace1b10d3dc5c40dff6d54fb98ca6d7d8233"
+            "image": "registry.redhat.io/mtv-candidate/mtv-virt-v2v-rhel9@sha256:8e42fb079fa6c7ff977bde896258d84b03d68015cd7216bb469040f0e8edbf3a"
         },
         {
             "name": "vsphere_copy_offload_populator",
-            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:d84f344b8e732f006b4b8985e2e1d35f491b8adb5b3bd6763886c27f11521f63"
+            "image": "registry.redhat.io/mtv-candidate/mtv-vsphere-copy-offload-populator-rhel9@sha256:aeeee8faccf2ad1eb08d7e89929d8e4793ddd5786bee02aed397b37fd94ef2ef"
         },
         {
             "name": "",
-            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:477f05f8eb992e219465b61b45a16c3d4cddd294644682681eedac765db08891"
+            "image": "registry.stage.redhat.io/mtv-candidate/mtv-operator-bundle@sha256:20a54f142bc71d0f8b177b5d0fb54fb7aaaea3bc0bd5d6c9fde6c25312e55cf4"
         }
     ]
 }
